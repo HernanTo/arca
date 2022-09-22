@@ -22,7 +22,7 @@
                 <input type="submit" value="Buscar" class="btn-fil">
               </form>
 
-              <form action="neg_U_filtrarUser.php" method="post">
+              <form action="neg_U_filtrarUser.php" method="GET">
               <div class="">
                 <p>Filtrar usuarios por el tipo de documento y el documento</p>
                 <select name="fk_pk_tipo_documentoU" id="fk_pk_tipo_documentoU" required>
@@ -36,7 +36,7 @@
                 <input type="submit" value="Buscar" class="btn-fil">
             </div>
               </form>
-              <form action="neg_U_filtrarUserPorRol.php" method="post">
+              <form action="neg_U_filtrarUserPorRol.php" method="GET">
                 <p>Buscar por roles</p>
                 <select name="usuarioRol" id="usuarioRol" required>
                   <option value="">Selecciona un rol</option>

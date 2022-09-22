@@ -15,6 +15,7 @@ class usuario{
                 mysqli_query($db, "UPDATE usuario set estado_U = 1 WHERE fk_pk_tipo_documentoU = '$tdd' AND documento_U = '$docUser'");
                 header('Location: ' . $_SERVER['HTTP_REFERER']);
                 
+                
             }else{ 
                 mysqli_query($db, "UPDATE usuario set estado_U = 0 WHERE fk_pk_tipo_documentoU = '$tdd' AND documento_U = '$docUser'");
                 header('Location: ' . $_SERVER['HTTP_REFERER']);

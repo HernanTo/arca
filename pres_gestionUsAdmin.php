@@ -33,8 +33,8 @@ $urlPhoto = $_SESSION["photo"];
                 <div class="cards-search-small">
                     <h4 class="title">Buscar por roles.</h4>
                     <img src="./assets\img/icons/busqueda.svg" alt="" class="icon">
-                    <form action="./neg_U_leer.php" method="post" class="form">
-                        <input type="hidden" name="type" value="2">
+
+                    <form action="./neg_U_filtrarUserPorRol.php" method="post" class="form">
                         <p>Selecciona el tipo de rol que deseas buscar.</p>
                         <select name="usuarioRol" id="usuarioRol" class="seleccion">
                             <option hidden>Tipo de rol</option>
@@ -45,12 +45,13 @@ $urlPhoto = $_SESSION["photo"];
                         </select><br>
                         <button type="submit" class="btn">Buscar</button>
                     </form>
+
                 </div>
                 <div class="cards-search-small-2">
                     <h4 class="title">Buscar usuario.</h4>
                     <img src="./assets\img/icons/busqueda.svg" alt="" class="icon">
-                    <form action="./neg_U_leer.php" method="post" class="form">
-                        <input type="hidden" name="type" value="3">
+
+                    <form action="./neg_U_filtrarUser.php" method="post" class="form">
                         <p>Ingresa los datos que deseas buscar.</p>
                         <select name="fk_pk_tipo_documentoU" id="fk_pk_tipo_documentoU" class="seleccion">
                             <option value="" hidden>Tipo de documento</option>
@@ -61,10 +62,12 @@ $urlPhoto = $_SESSION["photo"];
                         <input name="documento" id="documento" type="text" placeholder="Numero de documento"><br>
                         <button type="submit" class="btn">Buscar</button>
                     </form>
+
                 </div>
             <div class="card-search">
                 <h4 class="title">Agregar usuarios.</h4>
                 <img src="./assets\img/icons/agregar-usuario.svg" alt="" class="icon">
+
                 <form action="neg_U_Crear.php" method="post" class="form">
                     <select name="usuarioRol" id="usuarioRol" class="seleccion">
                         <option hidden>Tipo de cuenta</option>
@@ -95,6 +98,7 @@ $urlPhoto = $_SESSION["photo"];
                     <input name="Numcel" id="Numcel" type="text" placeholder="Numero de celular"><br>
                     <button type="submit" class="btn">Agregar</button>
                 </form>
+
             </div>
         </article>
     </div>

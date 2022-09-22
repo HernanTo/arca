@@ -1,33 +1,21 @@
 <?php
     include ('./seguridad_admin.php');
-    // if(!$_GET){
-    //     header("Location:neg_U_leer.php?pagina=1");
-    // }
+    if(!$_GET){
+        header("Location:neg_U_leer.php?pagina=1");
+    }
     class usuario{
-        public function traerUsuarios($type, $rol, $tdd, $docu){
+        public function traerUsuarios(){
             include ('./data_conexion.php');
 
-                
-            if($type == 2){
-                $condicion = "usuario_rol = '" . $rol ."'";
-                
-            }elseif($type == 3){
-                $condicion = "fk_pk_tipo_documentoU = '". $tdd ."' AND documento_U = '". $docu ."'";
-                
-            }else{
-                $condicion = 'TRUE';
-                
+            $resultadoAllUsers = $db -> query('SELECT *FROM usuario');
+            $canPag = ceil(($resultadoAllUsers->num_rows)/6);   
+
+            $iniciar = ($_GET['pagina']-1)*6;
+            $final = $iniciar + 6;
+
+            if($_GET['pagina'] > $canPag || $_GET['pagina'] <= 0){
+                header("Location:neg_U_leer.php?pagina=1");
             }
-
-            // $resultadoAllUsers = $db -> query('SELECT *FROM usuario');
-            // $canPag = ceil(($resultadoAllUsers->num_rows)/6);   
-
-            // $iniciar = ($_GET['pagina']-1)*6;
-            // $final = $iniciar + 6;
-
-            // if($_GET['pagina'] > $canPag || $_GET['pagina'] <= 0){
-            //     header("Location:neg_U_leer.php?pagina=1");
-            // }
 
             //Buscar usuarios en general
             $sql = "SELECT CONCAT(usuario_tdoc, ' ',  usuario_id) as documento, estado_U, desc_rol as usuario_rol, CONCAT(pNombre_U, ' ', sNombre_U, ' ', pApellido_U, ' ', sApellido_U) as 'Nombre' , fechaNacimiento_U , direccion_U , correoElectronico_U , celular_U, usuario_tdoc, usuario_id
@@ -36,8 +24,7 @@
             on documento_U = usuario_id
             INNER JOIN roles
             on usuario_rol = cod_rol
-            WHERE $condicion";
-            // Limit $iniciar, 6
+            Limit $iniciar, 6";
 
             $resultado = $db -> query($sql);
 ?>            
@@ -97,7 +84,7 @@
             <?php }?>
             </div>
             <?php
-            return [$resultado, 'a'];
+            return [$resultado, $canPag];
         }
     }
 
@@ -129,43 +116,34 @@
                 
             </div>
            <div class="con-tables">
-                <?php
-                    isset($_POST['type']) ? $type = $_POST['type'] : $type = $_GET['type'];
-                    isset($_POST['usuarioRol']) ? $rol = $_POST['usuarioRol'] : $rol = ' ';
-                    isset($_POST['fk_pk_tipo_documentoU']) ? $tdd = $_POST['fk_pk_tipo_documentoU'] : $tdd = ' ';
-                    isset($_POST['documento']) ? $docu = $_POST['documento'] : $docu = ' ';
-
-                    list($resultado, $canPag) = $crud->traerUsuarios($type, $rol, $tdd, $docu);
-                ?>
+                <?php list($resultado, $canPag) = $crud->traerUsuarios(); ?>
            </div>
-           <!-- <div class="con-pagination">
+           <div class="con-pagination">
             
             <div class="pagination">
                 
-                <?php// if($_GET['pagina'] <= 1){ ?>
+                <?php if($_GET['pagina'] <= 1){ ?>
                 <a  class="disable">&laquo;</a>
-                <?php// }else{ ?>        
-                <a href="neg_U_leer.php?pagina=<?php // echo $_GET['pagina']-1 ?>">&laquo;</a>
-                <?php // }?>
+                <?php }else{ ?>        
+                <a href="neg_U_leer.php?pagina=<?php  echo $_GET['pagina']-1 ?>">&laquo;</a>
+                <?php  }?>
         
         
-                <?php // for($i=0; $i < $canPag; $i++){?>
-                    <a href='neg_U_leer.php?pagina=<?php // echo $i+1?>' class="<?php // echo $_GET['pagina'] == $i+1 ? 'active' : '' ?>"><?php // echo $i+1; ?></a>      
-                <?php // }?>
+                <?php for($i=0; $i < $canPag; $i++){?>
+                    <a href='neg_U_leer.php?pagina=<?php echo $i+1?>' class="<?php echo $_GET['pagina'] == $i+1 ? 'active' : '' ?>"><?php echo $i+1; ?></a>      
+                <?php  }?>
         
         
-                <?php // if($_GET['pagina'] >= $canPag){ ?>
+                <?php if($_GET['pagina'] >= $canPag){ ?>
                     <a  class="disable">&raquo;</a>
-                <?php // }else{ ?>        
-                        <a href="neg_U_leer.php?pagina=<?php // echo $_GET['pagina']+1 ?>">&raquo;</a>
-                <?php // }?>
+                <?php } else{ ?>        
+                        <a href="neg_U_leer.php?pagina=<?php echo $_GET['pagina']+1 ?>">&raquo;</a>
+                <?php }?>
         
-            </div> -->
+            </div>
            </div>
         </article>
     </div>
     
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
