@@ -1,0 +1,53 @@
+.table{
+	background-color: #FBFCFC;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+th, td{
+	padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+td{
+	padding: 20px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+thead{
+	background-color: #473d8bde;
+	border-bottom: solid 5px #473d8bce;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #17202a10;
+}
+
+.vermas {
+    background-color: #473d8b7c;
+    border-radius: 5%;
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', 'sans-serif';
+    cursor: pointer;
+}
+
+.filtro {
+    background-color: #cbcaff;
+    font-family: 'Poppins', 'sans-serif';
+    border-radius: 5%;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    padding-left: 0.8rem;
+    margin-bottom: 0.8rem;
+}

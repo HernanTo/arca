@@ -1,0 +1,164 @@
+.con-pagination{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding-top: 50px;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    /* border: 1px solid #ddd; */
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    display: block;
+  }
+  
+  .pagination a.active {
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  
+  .pagination a:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .pagination a:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .pagination a.disable{
+    border-color: rgb(206, 206, 206);
+    color: #ddd;
+    cursor:default;
+  }
+  .pagination a.disable:hover{
+    background: none;
+  }
+
+
+/* Design  table */
+
+.table{
+  display: grid;
+  grid-auto-rows: 60px;
+  /* background:#FBFCFC; */
+  border-radius: 10px;
+}
+.row-header{
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  justify-items: center;
+  align-items: center;
+  background: #483D8B;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+}
+ .cell{
+  border-right: 3px solid #F4F6F7;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.row{
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  justify-items: center;
+  align-items: center;
+  background: white;
+
+
+}
+.row .cell{
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  
+}
+.cell-docu{
+  grid-column: 2/4;
+}
+.cell-name{
+  grid-column: 4/7;
+}
+.con-actions{
+  grid-column: 10/11;
+  border-right: 0px;
+
+}
+.cell-email{
+  grid-column: 7/9;
+}
+.row-dif{
+  background: rgb(23 32 42 / 0.1);
+  border-radius: 10px;
+}
+
+
+/* btn estado */
+
+.cell-estado{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.con-btn-estado{
+  background:#F5F5F5;
+  height: 25px;
+  width: 50px;
+  border-radius: 20px;
+  display: grid;
+  align-items: center;
+  position: relative;
+}
+.circle-estado{
+  transition: all 0.6s;
+  background: white;
+  height: 80%;
+  width: 40%;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+border: none;
+}
+
+.row .con-actions{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 70%;
+}
+.con-actions button{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  background: none;
+  padding: 0px;
+}
+.row .con-actions a img, .row .con-actions button img{
+  height: 25px;
+}
+
+/* Model */
+.container-model{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}

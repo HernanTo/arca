@@ -1,0 +1,82 @@
+.header{
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(2,30px);
+    grid-column: 5/-1;
+    grid-row: 1/3;
+    row-gap: 10px;
+}
+.name-page{
+    margin-top: 30px;
+    grid-column: 3/20;
+    grid-row: 1/3;
+    display: grid;
+    align-content:center;
+}
+.name-page h2{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+}
+.des-page{
+    grid-column: 3/20;
+    grid-row: 3/4;
+    display: grid;
+    align-items: center;
+    margin-top: 0px;
+
+}
+.des-page p{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+}
+.con-name{
+    grid-column: 28/37;
+    padding-right: 20px;
+    margin-top: 60px;
+    grid-row: 1/3;
+    display: grid;
+    align-content:center;  
+    justify-content: right;
+    text-align: right;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+}
+.con-name h4{
+    padding: 0px;
+    margin: 0px;
+}
+.con-photo{
+    grid-column: 37/39;
+    grid-row: 1/5;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.con-photo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 25px;
+}
+.funciones{
+    margin-top: -20px;
+    grid-column: 28/37;
+    grid-row: 3/4;
+    display: grid;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    padding-right: 20px;
+}
+.funciones a{
+    font-family: 'Nunito';
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--main-color);
+}
