@@ -22,7 +22,7 @@
             <span class="con-name-select">Dashboard</span>
 
         </a>
-        <a class="con-items" href="#">
+        <a class="con-items" href="./neg_Ci_buscar.php">
 
             <span class="line-hor"></span>
             <div class="con_img">
@@ -31,7 +31,7 @@
             <span class="con-name-item">Horarios</span>
 
         </a>
-        <a class="con-items" href="#">
+        <a class="con-items" href="./neg_leerPQRSF.php">
 
             <span class="line-hor"></span>
             <div class="con_img">

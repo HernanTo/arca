@@ -1,7 +1,5 @@
 <?php 
 include ('seguridad_admin.php');
-$nombreus = $_SESSION["pNombre_U"];
-$nombreCompleto = "$_SESSION[pNombre_U] $_SESSION[sNombre_U] $_SESSION[pApellido_U] $_SESSION[sApellido_U] ";
 $nombrepag = "Módulo de PQRSF.";
 $descpag = "Observa y contesta todos los PQRSF de tus usuarios.";
 $urlPhoto = $_SESSION["photo"];
@@ -25,6 +23,7 @@ $urlPhoto = $_SESSION["photo"];
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/view_tables.css">
   </head>
 <body>
 <div class="container">
@@ -37,23 +36,25 @@ $urlPhoto = $_SESSION["photo"];
                     
             <?php
     class pqrsf{
-        public function leerPQRSF(){
+        public function leerPQRSF($condicion){
             include ('data_conexion.php');
             $sql = "SELECT NumeroRadicacion , TipoPQRSF , CONCAT(fk_pk_tipo_documentoU, ' ', documento_U, ' ') as 'Documento', CONCAT(pNombre_U, ' ', sNombre_U, ' ', pApellido_U, ' ', sApellido_U) as 'Nombre'  FROM pqrsf 
             inner join tipopqrsf
-            on idTipoPQRSF = fk_pk_idTipoPQRSF " ;
+            on idTipoPQRSF = fk_pk_idTipoPQRSF
+            $condicion" ;
 
             $resultado = $db -> query($sql);
             ?>
-            <form action="">
-                        <select name="Filtro" id="filtro" class="filtro">
-                            <option>Todos</option>
-                            <option value="">Peticiones</option>
-                            <option value="">Quejas</option>
-                            <option value="">Reclamos</option>
-                            <option value="">Sugerencias</option>
-                            <option value="">Felicitaciones</option>
+            <form action="neg_leerPQRSF.php" method="GET">
+                        <select name="filtro" id="filtro" class="filtro">
+                            <option value="!= 0232">Todos</option>
+                            <option value="= 3">Peticiones</option>
+                            <option value="= 1">Quejas</option>
+                            <option value="= 4">Reclamos</option>
+                            <option value="= 5">Sugerencias</option>
+                            <option value="= 2">Felicitaciones</option>
                         </select>
+                        <input type="submit" value="Buscar">
                     </form>
             <table>
                 <thead>
@@ -86,7 +87,7 @@ $urlPhoto = $_SESSION["photo"];
             }
         }
     $crud = new pqrsf();
-    $crud->leerPQRSF();
+    $crud->leerPQRSF(isset($_GET['filtro'])? 'WHERE fk_pk_idTipoPQRSF' . $_GET['filtro'] : 'WHERE TRUE');
         ?>
         </section>
         </article>

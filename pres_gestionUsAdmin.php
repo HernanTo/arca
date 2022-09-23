@@ -34,7 +34,7 @@ $urlPhoto = $_SESSION["photo"];
                     <h4 class="title">Buscar por roles.</h4>
                     <img src="./assets\img/icons/busqueda.svg" alt="" class="icon">
 
-                    <form action="./neg_U_filtrarUserPorRol.php" method="post" class="form">
+                    <form action="./neg_U_filtrarUserPorRol.php" method="get" class="form">
                         <p>Selecciona el tipo de rol que deseas buscar.</p>
                         <select name="usuarioRol" id="usuarioRol" class="seleccion">
                             <option hidden>Tipo de rol</option>
@@ -51,7 +51,7 @@ $urlPhoto = $_SESSION["photo"];
                     <h4 class="title">Buscar usuario.</h4>
                     <img src="./assets\img/icons/busqueda.svg" alt="" class="icon">
 
-                    <form action="./neg_U_filtrarUser.php" method="post" class="form">
+                    <form action="./neg_U_filtrarUser.php" method="get" class="form">
                         <p>Ingresa los datos que deseas buscar.</p>
                         <select name="fk_pk_tipo_documentoU" id="fk_pk_tipo_documentoU" class="seleccion">
                             <option value="" hidden>Tipo de documento</option>

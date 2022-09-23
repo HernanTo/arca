@@ -111,23 +111,23 @@
             
             <div class="pagination">
                 
-                <?php if($_GET['pagina'] <= 1){ ?>
+                <?php // if($_GET['pagina'] <= 1){ ?>
                 <a  class="disable">&laquo;</a>
-                <?php }else{ ?>        
-                <a href="neg_U_filtrarUserPorRol.php?pagina=<?php  echo $_GET['pagina']-1 ?>">&laquo;</a>
-                <?php  }?>
+                <?php//  }else{ ?>        
+                <a href="neg_U_filtrarUserPorRol.php?pagina=<?php //  echo $_GET['pagina']-1 ?>">&laquo;</a>
+                <?php // }?>
         
         
-                <?php for($i=0; $i < $canPag; $i++){?>
-                    <a href='neg_U_filtrarUserPorRol.php?pagina=<?php echo $i+1?>' class="<?php echo $_GET['pagina'] == $i+1 ? 'active' : '' ?>"><?php echo $i+1; ?></a>      
-                <?php  }?>
+                <?php//  for($i=0; $i < $canPag; $i++){?>
+                    <a href='neg_U_filtrarUserPorRol.php?pagina=<?php//  echo $i+1?>' class="<?php // echo $_GET['pagina'] == $i+1 ? 'active' : '' ?>"><?php // echo $i+1; ?></a>      
+                <?php //  }?>
         
         
-                <?php if($_GET['pagina'] >= $canPag){ ?>
+                <?php // if($_GET['pagina'] >= $canPag){ ?>
                     <a  class="disable">&raquo;</a>
-                <?php } else{ ?>        
-                        <a href="neg_U_filtrarUserPorRol.php?pagina=<?php echo $_GET['pagina']+1 ?>">&raquo;</a>
-                <?php }?>
+                <?php // } else{ ?>        
+                        <a href="neg_U_filtrarUserPorRol.php?pagina=<?php//  echo $_GET['pagina']+1 ?>">&raquo;</a>
+                <?php//  }?>
         
             </div>
            </div> -->
