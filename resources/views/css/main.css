@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #F4F6F7;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #483D8B;
+}
+.container-dashboard{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    justify-content: space-between;
+    grid-template-rows: 90px 1fr;
+}
+.sidebar-dash{
+    width: 260px;
+    height: 100vh;
+    grid-row: 1/3;
+    overflow-x: hidden;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: 0.3s;
+    transition: all 0.3s;
+    overflow-y: scroll;
+}
+.navbar-dash{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.body-contenido{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    display: grid;
+}
+
+
+::-webkit-scrollbar{
+    width: 7px;
+    /* background: rgb(50 40 108 / 0.4); */
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(50 40 108 / 0.4);
+    border-radius: 10px;
+}
+@media(max-width:980px){
+    .body-contenido{
+        grid-column: 1/3;
+    }
+    .container-dashboard{
+        grid-template-columns: 140px 1fr !important;
+    }
+    #arca-logo{
+        height: 35px !important;
+        width: 85.5px !important;
+
+    }
+    .con-btn-help{
+        display: none;
+    }
+    .con-help-center{
+        display: none;
+
+    }
+
+}
+@media (min-width: 981px){
+    body{
+        overflow-y: auto !important;
+    }
+    .con-sidebar-a{
+        left: -6000px !important;
+    }
+}

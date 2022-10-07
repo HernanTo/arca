@@ -1,7 +1,0 @@
-1. Eliminar las citas de manera sistematica, al finalizar la semana o el domingo (por definir) :>
-
-----------------------------------
-alternativas Filtrar infor:
-En una consulta
-en el while
-...
