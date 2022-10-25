@@ -46,7 +46,7 @@
                                         <h2>Inicia sesión<span>.</span></h2>
                                 </div>
                                 <div class="sect-2">
-                                        <p>¿No tienes cuenta?</p> <a href="">Registrate</a>
+                                        <p>¿No tienes cuenta?</p> <a href="./pres_register.php">Registrate</a>
                                 </div>
                         </div>
                         <div class="body-login">
@@ -61,11 +61,13 @@
                                                                 <option value="CE">Cédula de extranjería</option>
                                                         </select>
                                                         <label for="floatingSelect">Tipo de documento</label>
+                                                        <span class="ico-input ico-input-select"><img src="./assets/img/icons/desplegable.svg" alt=""></span>
                                                 </div>
 
                                                 <div class="form-floating">
-                                                        <input type="number" class="form-control" id="floatingInputValue" placeholder="Número de identidad" name="document" require>
+                                                        <input type="number" class="form-control number-input" id="floatingInputValue" placeholder="Número de identidad" name="document" require>
                                                         <label for="floatingInputValue">Número de identidad</label>
+                                                        <span class="ico-input"><img src="./assets/img/icons/id-insignia 1.svg" alt=""></span>
                                                 </div>
 
                                                 <div class="form-floating">
@@ -80,7 +82,7 @@
                                         </div>
                                         
                                         <div class="con-btns">
-                                                <a href="#">Volver</a>
+                                                <a href="./index.html">Volver</a>
                                                 <input type="submit" value="Ingresar">
                                         </div>
 

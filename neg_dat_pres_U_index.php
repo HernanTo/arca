@@ -137,7 +137,7 @@
     <?php
         include('./components/sidebar.php');
         include('./components/navbar.php');
-        ?>
+    ?>
         <div class="body-contenido">
             <div class="con-table">
                 <div class="info-table">
@@ -145,20 +145,20 @@
                         <h3>Busqueda <?php echo $searchType ?></h3> 
                     </div>
                     <div class="section-2">
-                        <select name="table-co_length" aria-controls="table-co" class>
+                        <!-- <select name="table-co_length" aria-controls="table-co" class>
                             <option value="10">10</option>
                             <option value="20">20</option>
                             <option value="30">30</option>
                             <option value="50">50</option>
                             <option value="100">100</option>
-                        </select>
+                        </select> -->
                     </div>
                     <div class="section-3">
-                        <?php
-                            if($_GET['type'] != 3){
-                                echo '<input type="text" name="" id="inpt-search" placeholder="Buscar">';
-                            }
-                        ?>
+                        <!-- <?php
+                            // if($_GET['type'] != 3){
+                            //     echo '<input type="text" name="" id="inpt-search" placeholder="Buscar">';
+                            // }
+                        ?> -->
                     </div>
                     <div class="section-4">
                     <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="">
@@ -187,26 +187,17 @@
             </div>
         </div>
 </div>
-<!-- JavaScript Bundle with Popper -->
+<!-- Start script main core -->
 <script src="./js/sidebar.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- end script main core -->
 
-
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+<!-- Start script datatables -->
 <script src="./datatable/js/jquery.dataTables.js"></script>
-
+<!-- end script datatables -->
  
 <script>
-// $(document).ready(function(){
-//   $("#inpt-search").on("keyup", function() {
-//     var value = $(this).val().toLowerCase();
-//     $("#table-co tbody tr").filter(function() {
-//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//     });
-//   });
-// });
 $(document).ready( function () {
     $('#table-co').DataTable();
 } )

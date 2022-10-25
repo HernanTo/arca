@@ -430,17 +430,15 @@ tbody tr{
 
 }
 .row-secondary{
-    background: rgba(23, 32, 42, 0.1);
+    background: rgba(23, 32, 42, 0.1) !important;
     border-radius: 10px;
     transition: all 0.3s;
 }
 tr .con-actions{
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    justify-content: center;
-    align-content: center;
-    margin-top: 20px;
-
+    height: 60px;
+    padding: 0px !important;
 }
 tr .con-actions a{
     display: grid;
@@ -455,7 +453,9 @@ tr .con-actions a img{
     margin-bottom: 80px;
 }
 #table-co{
-    margin-top: 70px;
+    margin-top: 40px;
+    grid-column: 1/3;
+
 }
 table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, table.dataTable tfoot td{
     text-align: center;
@@ -522,8 +522,8 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, ta
     }
     .info-table{
         grid-template-columns: 40% 40%;
-        grid-template-rows: repeat(3,60px);
-        height: 190px;
+        grid-template-rows: repeat(2,60px);
+        height: 150px;
         row-gap: 10px;
     }
     .section-1{
@@ -533,6 +533,7 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, ta
         grid-column: 1/2;
         justify-content: flex-start;
         padding-left: 54px;
+        display: none;
     }
     .section-2 select{
         width: 150px;
@@ -540,6 +541,7 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, ta
     .section-3{
         grid-column: 2/3;
         padding-left: 0px;
+        display: none;
     }
     .section-3 input{
         width: 80%;
@@ -548,6 +550,12 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, ta
         grid-column: 1/3;
         justify-content: flex-start;
         padding-left: 54px;
+    }
+    #table-co{
+        margin-top: 60px;
+    }
+    .info-table{
+        margin-bottom: 0px;
     }
 }
 
@@ -564,5 +572,8 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tfoot th, ta
     }
     .con-help-center a{
         margin-bottom: 10px;
+    }
+    #table-co{
+        margin-top: 30px;
     }
 }

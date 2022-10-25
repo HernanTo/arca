@@ -45,7 +45,7 @@
                 <h2>Registrarse<span>.</span></h2>
             </div>
             <div class="head-2">
-                <p>¿Ya tienes cuenta? <a href="">Inicia sesión.</a></p>
+                <p>¿Ya tienes cuenta? <a href="./pres_login.php">Inicia sesión.</a></p>
             </div>
         </div>
         <div class="body-register">

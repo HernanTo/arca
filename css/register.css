@@ -17,6 +17,7 @@ body{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     text-align: center;
+    margin-top: 10px;
 }
 .head-2 p{
     text-align: center;
@@ -124,11 +125,12 @@ body{
     }
 }
 @media (min-width:1200px){
-    .con-register{
+    /* .con-register{
         align-content: center;
-    }
+    } */
     .body-register{
         grid-column: 1/2;
+        height: 558px;
     }
     .form-register{
         width: 750px;
@@ -146,7 +148,8 @@ body{
     .con-img-register img{
         /* display: none; */
         height: 100%;
-        width: 380px;
+        /* width: 380px; */
+        width: 63%;
         margin-left: auto;
         margin-right: 0px;
         object-fit: cover;

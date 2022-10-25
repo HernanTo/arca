@@ -40,9 +40,8 @@
     margin: 0px;
 }
 .sect-2{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: flex-start;
+    display: flex;
+    column-gap: 10px;
 }
 .sect-2 p, .sect-2 a{
     padding: 0px;
@@ -56,7 +55,7 @@
 
 .con-form-lo{
     display: grid;
-    row-gap: 10px;
+    row-gap: 15px;
 }
 .form-floating select, .form-floating input{
     font-family: 'Poppins';
@@ -103,14 +102,47 @@
     text-decoration: none;
     border-radius: 30px;
     font-family: 'Poppins';
+    box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.05);
 }
 .con-btns a{
-    background: #F4F6F7;
+    background: white;
     color: rgb(23, 32, 42, 0.5);
 }
 .con-btns input{
     background: #483D8B;
     color: white;
+}
+
+.form-floating{
+    position: relative;
+}
+:-webkit-input{
+    background: none;
+}
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.number-input {
+    -moz-appearance: textfield;
+}
+
+.ico-input{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    top: 0px;
+}
+.ico-input-select img{
+    width: 30px;
+}
+.ico-input img{
+    height: 30px;
 }
 
 @media (min-width:981px){
@@ -139,7 +171,8 @@
     .sect-img img{
         /* display: none; */
         height: 100%;
-        width: 380px;
+        /* width: 380px; */
+        width: 63%;
         margin-left: auto;
         margin-right: 0px;
         object-fit: cover;
