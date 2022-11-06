@@ -135,6 +135,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                         </div>
                         <div class="body-form">
                             <?php
+                            if(isset($_SESSION['administrador'])){
                             if($_SESSION['administrador'] == 1){
                                 ?>
                                 <div class="form-floating">
@@ -164,6 +165,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                                 </div>
                                 <?php
                             }
+                        }
                             ?>
                             <div class="form-floating">
 

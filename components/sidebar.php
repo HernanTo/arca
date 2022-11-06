@@ -18,6 +18,7 @@
         </a>
 
     <?php
+        if(isset($_SESSION['administrador'])){
         if ($_SESSION['administrador'] == 1) {
             ?>
             <a class="item-sidebar" href="">
@@ -27,8 +28,16 @@
             </div>
             <div class="name-item">Horarios</div>
         </a>
+        
+                <a class="item-sidebar" href="./pres_gestionUs.php">
+            <div class="color-item"></div>
+            <div class="con-ico-item">
+                <img src="./assets/img/icons/users-alt-free-icon-font.svg" alt="">
+            </div>
+            <div class="name-item">Gestion usuarios</div>
+        </a>
 
-        <a class="item-sidebar" href="neg_dat_pres_pqrsf_index.php">
+        <a class="item-sidebar" href="./neg_dat_pres_pqrsf_index.php">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/ico_document-signed.svg" alt="">
@@ -36,7 +45,9 @@
             <div class="name-item">PQRSF</div>
         </a>
     <?php
-        } elseif ($_SESSION['secretaria'] == 1) {
+        }} 
+            if(isset($_SESSION['secretaria'])){
+            if ($_SESSION['secretaria'] == 1) {
             ?>
                 <a class="item-sidebar" href="./pres_gestionUs.php">
             <div class="color-item"></div>
@@ -52,7 +63,10 @@
             </div>
             <div class="name-item">Gestion Citas</div>
         </a>
-    <?php } elseif ($_SESSION['doctor'] == 1) {
+    <?php
+        }} 
+            if(isset($_SESSION['doctor'])){
+            if ($_SESSION['doctor'] == 1) {
         ?>
                     <a class="item-sidebar" href="">
             <div class="color-item"></div>
@@ -68,9 +82,12 @@
             </div>
             <div class="name-item">Diágnosticos</div>
         </a>
-    <?php } elseif ($_SESSION['paciente'] == 1) {
+    <?php
+        }} 
+            if(isset($_SESSION['paciente'])){
+            if ($_SESSION['paciente'] == 1) {
         ?>
-                <a class="item-sidebar" href="">
+        <a class="item-sidebar" href="">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/ico_stethoscope.svg" alt="">
@@ -84,8 +101,8 @@
             </div>
             <div class="name-item"></div>
         </a>
-    <?php }
-
+    <?php 
+        }}
     ?>
 
         <a class="item-sidebar section-item">
@@ -94,12 +111,19 @@
             <div class="name-item">Ajustes</div>
         </a>
 
-        <a class="item-sidebar item-perfil" href="">
+        <a class="item-sidebar item-perfil" href="pres_U_edit_profile.php">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/ico_user-free-icon-font (1).svg" alt="">
             </div>
             <div class="name-item">Perfil</div>
+        </a>
+        <a class="item-sidebar item-seg" href="pres_U_edit_profile.php">
+            <div class="color-item"></div>
+            <div class="con-ico-item">
+                <img src="#" alt="">
+            </div>
+            <div class="name-item">Seguridad</div>
         </a>
     </div>
     <div class="con-foo-sidebar">

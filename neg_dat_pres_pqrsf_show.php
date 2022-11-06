@@ -156,7 +156,7 @@
 
                     </div>
                     <div class="actions-show">
-                        <a href="./neg_dat_pres_pqrsf_index.php" class="show-act">Volver</a>
+                        <a href="javascript: history.go(-1)" class="show-act">Volver</a>
                         <a href="./neg_dat_pqrsf_update.php?id=<?php echo $_GET['id'] ?>" class="show-act"><?php echo $data['answ'] != 1 ? 'Respondido' : 'No respondido' ; ?></a>
                     </div>
             </div>

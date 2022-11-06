@@ -29,7 +29,7 @@
                 if($specialty == 4){
                     $roleCondition = "AND TRUE";
                 }else {
-                    $roleCondition = "AND especialidad_U NOT IN (SELECT especialidad_U from usuario WHERE especialidad_U = 4)";
+                    $roleCondition = "AND cod_rol != 1";
                 }
             }elseif($roleUser == 2){
                 $roleCondition = "AND usuario_rol = 4";
@@ -53,6 +53,8 @@
                     $name = $row['Nombre'];
                     $email = $row['correoElectronico_U'];
                     $estado = $row['estado_U'];
+                    $tdd = $row['usuario_tdoc'];
+                    $numDocument = $row['usuario_id'];
 
                 ?>
                 <tr class="<?php echo $iterable ? ' ' : 'row-secondary' ?>">
@@ -61,10 +63,10 @@
                     <td id="hidden-res"><?php echo $name ?></td>
                     <td><?php echo $email ?></td>
                     <td id="last-clm" class="con-actions">
-                        <a href="#">
+                        <a href="./neg_dat_pres_U_show.php?tdd=<?php echo $tdd ?>&document=<?php echo $numDocument ?>">
                             <img src="./assets./img/icons/eye.svg" alt="">
                         </a>
-                        <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="./neg_dat_pres_U_edit.php?tdd=<?php echo $tdd ?>&document=<?php echo $numDocument?>">
                             <img src="./assets./img/icons/lapiz.svg" alt="">
                         </a>
                     </td>
