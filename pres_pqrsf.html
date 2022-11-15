@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PQRSF | Arca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" href="./css/pqrs.css">
+    <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="con-form-pqrs">
+        <form action="" method="post">
+        <section class="head-form">
+            <h2>Bienvenido al modulo de PQRSF</h2>
+            <p>Este formulario esta destinado a presentar peticiones de cada usuario, responda los campos necesarios para hacer un mejor seguimiento de su petición.</p>
+        </section>
+        <section class="form-ba">
+            <div class="head-form">
+                <h4>Información del afectado</h4>
+                <hr>
+            </div>
+            <div class="body-form-ba">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="fk_pk_tipo_documentoU" required>
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    </select>
+                    <label for="floatingSelect">Tipo de documento</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" class="form-control number-input" id="floatingInput" placeholder="Número de documento"   name="docuemnt">
+                    <label for="floatingInput">Número de documento</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Primer nombre" name="pr_name" required>
+                    <label for="floatingInputValue">Primer nombre</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Segundo nombre" name="sg_name">
+                    <label for="floatingInputValue">Segundo nombre</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Primer apellido" name="pr_apellido" required>
+                    <label for="floatingInputValue">Primer apellido</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Segundo apellido" name="sg_apellido">
+                    <label for="floatingInputValue">Segundo apellido</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" class="form-control number-input" id="floatingInput" placeholder="Número de documento"  name="phonenum">
+                    <label for="floatingInput">Celular</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" class="form-control number-input" id="floatingInput" placeholder="Número de documento"  name="phonenum">
+                    <label for="floatingInput">Teléfono fijo</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="Correo electronico" name="correo" required>
+                    <label for="floatingInputValue">Email</label>
+                </div>
+            </div>
+        </section>
+        <section class="detail-so">
+            <div class="head-form">
+                <h4>Detalle de la solicitud</h4>
+                <hr>
+            </div>
+            <div class="body-form-detail">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="fk_pk_tipo_documentoU" required>
+                    <option value="1">Queja</option>
+                    <option value="2">Felicitaciones</option>
+                    <option value="3">Peticiones</option>
+                    <option value="4">Reclamos</option>
+                    <option value="5">Sugerencias</option>
+                    </select>
+                    <label for="floatingSelect">Tipo de solicitud</label>
+                </div>
+                <div class="form-floating">
+                    <input type="date" class="form-control date-input" id="floatingInputValue" placeholder="Fecha de nacimiento" name="fecha_naci">
+                    <label for="floatingInputValue">Fecha de nacimiento</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Motivo del PQRSF" name="sg_apellido">
+                    <label for="floatingInputValue">Motivo del PQRSF</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Detalle del PQRSF"></textarea>
+                    <label for="floatingTextarea">Detalle del PQRSF</label>
+                  </div>
+            </div>
+        </section>
+        <section class="foo-form">
+
+        </section>
+    </form>
+    </div>
+</body>
+</html>
