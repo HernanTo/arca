@@ -146,11 +146,11 @@
                         </div>
                         <div class="con-true-spp">
                             
-                            <a class="file-spp" href="<?php echo $data['support'] ?>" style="text-decoration: none;">
+                            <a class="file-spp" href="assets/supports/<?php echo $data['support'] ?>" style="text-decoration: none;">
                             <div class="ico-spp">
                                 <img src="./assets/img/icons/form.svg" alt="">
                             </div>
-                            <div class="name-spp"><p>archivo.pdf</p></div>
+                            <div class="name-spp"><p>soporte.pdf</p></div>
                             </a>
                         </div>
 

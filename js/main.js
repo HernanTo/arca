@@ -10,3 +10,16 @@ function animationBtn(estado){
         console.log(estado);
     }
 }
+function selectFilePqrsf(){
+    let file = document.getElementById('file').value;
+    if(file === ''){
+        file = 'Seleccionar archivos';
+    }else{
+        file = file.slice(12);
+    }
+    let labelFile = document.getElementById('name-file');
+    labelFile.innerHTML = file;
+}
+setInterval(() => {
+    selectFilePqrsf()
+}, );
