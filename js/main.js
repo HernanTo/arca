@@ -20,6 +20,14 @@ function selectFilePqrsf(){
     let labelFile = document.getElementById('name-file');
     labelFile.innerHTML = file;
 }
-setInterval(() => {
-    selectFilePqrsf()
-}, );
+function fileValidation(){
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(.PDF|.pdf)$/i;
+    if(!allowedExtensions.exec(filePath)){
+            $('#exampleModal').modal('show');
+
+        fileInput.value = '';
+        return false;
+}
+}

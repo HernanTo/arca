@@ -22,7 +22,7 @@
                     <td colspan="2" id="first-clm"><?php echo $id ?></td>
                     <td><?php echo $typePqrsf ?></td>
                     <td><?php echo $document ?></td>
-                    <td><?php echo $estado == 1 ? 'Respondido' : 'No respondido'?></td>
+                    <td><?php echo $estado == 1 ? 'Respondido' : 'En tramite'?></td>
                     <td id="last-clm" class="con-actions" style="grid-template-columns: 100%;">
                         <a href="./neg_dat_pres_pqrsf_show.php?id=<?php echo $id ?>">
                             <img src="./assets./img/icons/eye.svg" alt="">
@@ -143,7 +143,7 @@
 $(document).ready( function () {
     $('#table-co').DataTable();
 } )
-$('table').dataTable({bFilter: false, bInfo: false})
+// $('table').dataTable({bFilter: false, bInfo: false})
 </script>
 </body>
 </html>

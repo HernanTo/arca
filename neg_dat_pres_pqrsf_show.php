@@ -130,7 +130,7 @@
                 </div>
                 <div class="item-show">
                     <h6>Estado:</h6>
-                    <p><?php echo $data['answ'] == 1 ? 'Respondido' : 'No respondido'?></p> 
+                    <p><?php echo $data['answ'] == 1 ? 'Respondido' : 'En tramite'?></p> 
                 </div>
             </div>
                 <div class="spp-show">
@@ -146,7 +146,7 @@
                         </div>
                         <div class="con-true-spp">
                             
-                            <a class="file-spp" href="assets/supports/<?php echo $data['support'] ?>" style="text-decoration: none;">
+                            <a class="file-spp" href="assets/supports/<?php echo $data['support'] ?>" style="text-decoration: none;" target="_blank">
                             <div class="ico-spp">
                                 <img src="./assets/img/icons/form.svg" alt="">
                             </div>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="actions-show">
                         <a href="javascript: history.go(-1)" class="show-act">Volver</a>
-                        <a href="./neg_dat_pqrsf_update.php?id=<?php echo $_GET['id'] ?>" class="show-act"><?php echo $data['answ'] != 1 ? 'Respondido' : 'No respondido' ; ?></a>
+                        <a href="./neg_dat_pqrsf_update.php?id=<?php echo $_GET['id'] ?>" class="show-act"><?php echo $data['answ'] != 1 ? 'Respondido' : 'En tramite' ; ?></a>
                     </div>
             </div>
         </div>

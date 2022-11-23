@@ -100,14 +100,19 @@ input[type="file"]{
     font-size: 15px;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
+    /* overflow: hidden; */
     width: 100%;
+}
+.name-file{
     overflow: hidden;
 }
 .name-file #name-file{
+    width: 150%;
     font-family: 'Poppins';
     font-weight: bold;
     font-size: 17px;
     overflow: hidden;
+    width: 300%;
 }
 .icon-clip{
     grid-column: 2/3;
@@ -158,6 +163,36 @@ input[type="file"]{
     border-radius: 20px;
     font-weight: bold;
 }
+.modal-header{
+    border: 0px;
+}
+.con-img-alert{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.con-img-alert img{
+    margin-top: -20px;
+}
+.modal-content{
+    background: #FBFCFC;
+    border-radius: 10px;
+}
+.con-alert-modal{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Poppins';
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+}
+.con-alert-modal p{
+    padding: 0px;
+    font-size: 17px
+}
+.fade{
+    background: rgba(23, 32, 42, 0.25); 
+}
 @media (min-width: 700px){
     .con-form-pqrs{
         padding-top: 45px;
@@ -167,7 +202,7 @@ input[type="file"]{
     .body-form-ba{
         grid-template-columns: repeat(2, 45%);
         column-gap: 5%;
-        
+
     }
     .body-form-detail{
         display: grid;
