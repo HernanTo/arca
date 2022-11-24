@@ -1,29 +1,11 @@
-<!-- <?php
-        // session_start();
-        // if(isset($_SESSION['logueado'])){
-        //         if($_SESSION['logueado'] == 1){
-        //                 header('Location: pres_dashboard.php');
-        //         }
-        // }
-?> -->
-<!-- 
-        <form action="./data_validar_iniciosesion.php" method="post" id="login">
-                <h2>Inicia sesión<span>.</span></h2>
-            
-                <select name="tdd" id="tdd" required>
-                  <option value="" hidden>Tipo de documento</option>
-                  <option value="CC">Cédula de ciudadanía</option>
-                  <option value="TI">Tarjeta de identidad</option>
-                  <option value="CE">Cédula de extranjería</option>
-                </select> -->
-                <!-- <label for="fk_pk_tipo_documentoU">Tipo de documento</label> -->
-<!--             
-                <input type="text" name="document" id="input-numDoc" placeholder=" " required />
-            
-                <input type="password" name="password" id="input_pass" placeholder=" " required/>
-
-                <input type="submit" value="Ingresar" class="btn-enviar">
-        </form> -->
+<?php
+        session_start();
+        if(isset($_SESSION['logueado'])){
+                if($_SESSION['logueado'] == 1){
+                        header('Location: pres_dashboard.php');
+                }
+        }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -49,7 +31,8 @@
             </div>
         </div>
         <div class="body-register">
-            <form action="" method="post" class="form-register">
+            <form action="./neg_dat_U_store.php" method="post" class="form-register">
+                <input type="hidden" name="type_register" value="1">
                 <div class="form-floating">
                     <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="fk_pk_tipo_documentoU" required>
                       <option value="CC">Cédula de ciudadanía</option>

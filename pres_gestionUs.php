@@ -66,7 +66,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                             <input type="hidden" value="2" name="type">
                             <div class="form-floating">
 
-                            <select class="form-select" id="floatingSelect" aria-label="" require name="rol">
+                            <select class="form-select" id="floatingSelect" aria-label="" required name="rol">
                                     <option hidden></option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Secretaria</option>
@@ -103,7 +103,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                                 <input type="hidden" value="3" name="type">
 
                                 <div class="form-floating">
-                                    <select class="form-select" id="floatingSelect" aria-label="" name="tdd" require>
+                                    <select class="form-select" id="floatingSelect" aria-label="" name="tdd" required>
                                             <option hidden></option>
                                             <option value="CC">Cédula de ciudadanía</option>
                                             <option value="CE">Cédula de extranjería</option>
@@ -113,7 +113,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                                 </div>
 
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="floatingPassword" placeholder="Documento" name="document" require>
+                                    <input type="number" class="form-control" id="floatingPassword" placeholder="Documento" name="document" required>
                                     <label for="floatingPassword">Documento</label>
                                 </div>
                         </div>
@@ -125,6 +125,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
 
                 <div class="con-form-new">
                     <form action="./neg_dat_U_store.php" method="post">
+                        <input type="hidden" name="type_register" value="2">
                         <div class="head-form">
                             <div class="title-form">
                                 <h3>Agregar Usuario</h3>
@@ -140,7 +141,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                                 ?>
                                 <div class="form-floating">
 
-                                    <select class="form-select" id="floatingSelect" aria-label="" require name="usuarioRol">
+                                    <select class="form-select" id="floatingSelect" aria-label="" required name="usuarioRol">
                                             <option hidden></option>
                                             <option value="1">Administrador</option>
                                             <option value="2">Secretaria</option>
@@ -153,7 +154,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
 
                                 <div class="form-floating">
 
-                                    <select class="form-select" id="floatingSelect" aria-label="" require name="especialidad">
+                                    <select class="form-select" id="floatingSelect" aria-label="" required name="especialidad">
                                             <option hidden></option>
                                             <option value="0">Ninguna</option>
                                             <option value="1">Médico General</option>
@@ -169,7 +170,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                             ?>
                             <div class="form-floating">
 
-                                <select class="form-select" id="floatingSelect" aria-label="" name="fk_pk_tipo_documentoU" require>
+                                <select class="form-select" id="floatingSelect" aria-label="" name="fk_pk_tipo_documentoU" required>
                                         <option hidden></option>
                                         <option value="CC">Cédula de ciudadanía</option>
                                         <option value="CE">Cédula de extranjería</option>
@@ -180,12 +181,12 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                             </div>
 
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="floatingPassword" placeholder="Documento" name="documento" require>
+                                <input type="number" class="form-control" id="floatingPassword" placeholder="Documento" name="documento" required>
                                 <label for="floatingPassword">Número de documento</label>
                             </div>
 
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="Documento" name="pr_name" require>
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Documento" name="pr_name" required>
                                 <label for="floatingPassword">Primer nombre</label>
                             </div>
 
@@ -195,7 +196,7 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                             </div>
 
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingPassword" placeholder="Documento" name="pr_apellido" require>
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="Documento" name="pr_apellido" required>
                                 <label for="floatingPassword">Primer apellido</label>
                             </div>
 
@@ -205,18 +206,18 @@ $descPage = "Gestiona a tus usuarios de una manera sencilla.";
                             </div>
 
                             <div class="form-floating">
-                                <input type="date" class="form-control" id="floatingPassword" placeholder="Documento" name="fecha_naci" require>
+                                <input type="date" class="form-control" id="floatingPassword" placeholder="Documento" name="fecha_naci" required>
                                 <label for="floatingPassword">Fecha nacimiento</label>
                             </div>
 
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="floatingPassword" placeholder="Documento" name="correo" require>
+                                <input type="email" class="form-control" id="floatingPassword" placeholder="Documento" name="correo" required>
                                 <label for="floatingPassword">Correo electrónico</label>
                             </div>
                             
 
                             <div class="form-floating">
-                                <input type="number" class="form-control" id="floatingPassword" placeholder="Documento" name="Numcel" require>
+                                <input type="number" class="form-control" id="floatingPassword" placeholder="Documento" name="Numcel" required>
                                 <label for="floatingPassword">Número de celular</label>
                             </div>
                             
