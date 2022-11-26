@@ -6,24 +6,6 @@
                 }
         }
 ?>
-<!-- 
-        <form action="./data_validar_iniciosesion.php" method="post" id="login">
-                <h2>Inicia sesión<span>.</span></h2>
-            
-                <select name="tdd" id="tdd" required>
-                  <option value="" hidden>Tipo de documento</option>
-                  <option value="CC">Cédula de ciudadanía</option>
-                  <option value="TI">Tarjeta de identidad</option>
-                  <option value="CE">Cédula de extranjería</option>
-                </select> -->
-                <!-- <label for="fk_pk_tipo_documentoU">Tipo de documento</label> -->
-<!--             
-                <input type="text" name="document" id="input-numDoc" placeholder=" " required />
-            
-                <input type="password" name="password" id="input_pass" placeholder=" " required/>
-
-                <input type="submit" value="Ingresar" class="btn-enviar">
-        </form> -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 
     <link rel="stylesheet" href="./css/main.css">
