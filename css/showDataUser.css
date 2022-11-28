@@ -1,60 +1,14 @@
-
-/* vista por si no aparece ningun usuario */
-.con-show-data-no-user{
-    display: grid;
-    grid-template-columns: 350px;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-}
-.alert-show-user{
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap: 25px;
-}
-.con-img-alert-show{
-    display: grid;
-    justify-content: center;
-}
-.con-img-alert-show img{
-    height: 120px;
-}
-.alert-show{
-    text-align: center;
-    display: grid;
-    row-gap: 10px;
-}
-.alert-show h4{
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.alert-show p{
-    font-family: 'Nunito';
-    font-style: italic;
-    font-size: 1.05rem;
-}
-.alert-show p a{
-    color: var(--main-color);
-    font-family: 'Poppins';
-    font-weight: 600;
-    text-decoration: none;
-}
-/* .body-contenido{
-    padding-left: 150px;
-    padding-right: 150px;
-} */
 .con-show-data-user{
     display: grid;
-    grid-template-columns: 370px;
+    grid-template-columns: 320px;
     grid-template-rows: 150px 561px;
     row-gap: 50px;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 .head-show-data-user{
     display: grid;
-    grid-template-columns: 100px 240px;
+    grid-template-columns: 100px 200px;
     grid-template-rows: 100%;
     column-gap: 10px;
 }
@@ -88,7 +42,7 @@
     margin: 0;
 }
 .body-show-data-user{
-    background: #FBFCFC;
+    background: rgba(23, 32, 42, 0.04);
     border-radius: 20px;
 }
 .item-title{
@@ -120,7 +74,7 @@
     grid-template-columns: 50px 250px;
     column-gap: 10px;
     grid-template-rows: 25px 25px;
-    padding-left: 25px;
+    /* padding-left: 25px; */
     padding-bottom: 5px;
 }
 .item-show img{
@@ -138,13 +92,14 @@
 }
 .con-btn-show{
     display: grid;
-    grid-template-columns: 180px 180px;
+    grid-template-columns: 180px;
+    grid-template-rows: repeat(2, 50px);
     column-gap: 20px;
-    grid-template-rows: 50px;
     justify-content: center;
     align-content: center;
     margin-bottom: 50px;
     margin-top: 50px;
+    row-gap: 20px;
 }
 .con-btn-show a{
     background-color: var(--main-color);
@@ -167,7 +122,7 @@
     transform: scale(1.04);
 }
 
-@media(min-width: 850px){
+@media(min-width: 700px){
     .con-show-data-user{
         grid-template-columns: repeat(2, 320px);
         grid-template-rows: 150px 378px;
@@ -189,6 +144,9 @@
     }
     .body-contenido{
         padding: 0px;
+    }
+    .con-btn-show{
+        grid-template-columns: 180px 180px;
     }
 }
 @media (min-width: 1300px){

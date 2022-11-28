@@ -101,7 +101,7 @@
     ?>
     <div class="body-contenido">
         <?php 
-            if($data == false){
+            if(!$data){
                 ?>
                 <div class="con-show-data-no-user">
                     <div class="alert-show-user">

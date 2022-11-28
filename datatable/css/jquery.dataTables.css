@@ -428,10 +428,9 @@ table.dataTable td {
   padding-left: 7px;
   outline: none;
   border-radius: 10px;
-  border: none;
-  border-style: none;
+  border: 2px solid #17202A;
   background: rgb(244 246 247/0.7);
-  box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.6);
+  /* box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.6); */
   font-family: 'Poppins';
 }
 /* .dataTables_wrapper .dataTables_filter {
@@ -451,9 +450,8 @@ table.dataTable td {
   outline: none;
   font-family: 'Poppins';
   border-radius: 10px;
-  border-style: none;
+  border: 2px solid #17202A;
   background: rgb(244 246 247/0.7);
-  box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.6);
   margin-left: 20px;
   margin-right: 20px;
   width: 240px;
@@ -608,6 +606,19 @@ table.dataTable td {
   .dataTables_wrapper .dataTables_filter {
     margin-top: 0.5em;
   }
+  #table-co_length{
+    grid-column: 1/3 !important;
+    grid-row: 1/2 !important;
+}
+.dataTables_filter{
+    grid-column: 1/3 !important;
+    grid-row: 2/3 !important;
+    justify-content: flex-start !important;
+    padding-left: 13.7px !important;
+}
+.dataTables_filter input{
+    margin: 0px !important;
+}
 }
 @media(max-width:980px){
   .dataTables_wrapper{
@@ -615,8 +626,6 @@ table.dataTable td {
     row-gap: 20px;
   }
   .dataTables_filter{
-    grid-row: 2/3;
-    justify-content: start;
     margin-left: 0px;
   }
   /* .dataTables_filter input{

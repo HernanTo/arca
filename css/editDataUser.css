@@ -1,45 +1,3 @@
-
-/* vista por si no aparece ningun usuario */
-.con-show-data-no-user{
-    display: grid;
-    grid-template-columns: 350px;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-}
-.alert-show-user{
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap: 25px;
-}
-.con-img-alert-show{
-    display: grid;
-    justify-content: center;
-}
-.con-img-alert-show img{
-    height: 120px;
-}
-.alert-show{
-    text-align: center;
-    display: grid;
-    row-gap: 10px;
-}
-.alert-show h4{
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.alert-show p{
-    font-family: 'Nunito';
-    font-style: italic;
-    font-size: 1.05rem;
-}
-.alert-show p a{
-    color: var(--main-color);
-    font-family: 'Poppins';
-    font-weight: 600;
-    text-decoration: none;
-}
 /* Vista editar */
 /* .body-contenido{
     padding-left: 150px;
@@ -47,7 +5,7 @@
 } */
 .con-show-data-user{
     display: grid;
-    grid-template-columns: 370px;
+    grid-template-columns: 320px;
     grid-template-rows: 150px;
     row-gap: 50px;
     justify-content: center;
@@ -55,7 +13,7 @@
 }
 .head-show-data-user{
     display: grid;
-    grid-template-columns: 100px 240px;
+    grid-template-columns: 100px 200px;
     grid-template-rows: 100%;
     column-gap: 10px;
 }
@@ -89,7 +47,7 @@
     margin: 0;
 }
 .body-show-data-user{
-    background: #FBFCFC;
+    background: rgba(23, 32, 42, 0.04);
     border-radius: 20px;
 }
 .item-title{
@@ -139,9 +97,9 @@
 }
 .con-btn-show{
     display: grid;
-    grid-template-columns: 180px 180px;
-    column-gap: 20px;
-    grid-template-rows: 50px;
+    grid-template-columns: 180px;
+    gap: 20px;
+    grid-template-rows: 50px 50px;
     justify-content: center;
     align-content: center;
     margin-bottom: 50px;
@@ -246,7 +204,7 @@
 /* .form-check-input:not(:checked){
     background-color: var(--main-color);
 } */
-@media(min-width: 850px){
+@media(min-width: 700px){
     .con-show-data-user{
         grid-template-columns: repeat(2, 320px);
         grid-template-rows: 150px;
@@ -271,6 +229,10 @@
     .body-contenido{
         padding: 0px;
     }
+    .con-btn-show{
+        grid-template-columns: 180px 180px;
+    }
+
 }
 @media (min-width: 1300px){
     .con-show-data-user{

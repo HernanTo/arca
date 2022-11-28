@@ -19,11 +19,11 @@
 
 ?>
                 <tr class="<?php echo $iterable ? ' ' : 'row-secondary' ?>">
-                    <td colspan="2" id="first-clm"><?php echo $id ?></td>
+                    <td class="th-first"><?php echo $id ?></td>
                     <td><?php echo $typePqrsf ?></td>
                     <td><?php echo $document ?></td>
                     <td><?php echo $estado == 1 ? 'Respondido' : 'En tramite'?></td>
-                    <td id="last-clm" class="con-actions" style="grid-template-columns: 100%;">
+                    <td id="last-clm" class="con-actions th-end" style="grid-template-columns: 100%;">
                         <a href="./neg_dat_pres_pqrsf_show.php?id=<?php echo $id ?>">
                             <img src="./assets./img/icons/eye.svg" alt="">
                         </a> 
@@ -56,6 +56,7 @@
     <!-- end icons -->
     <!-- Start styles Datatables -->
     <link rel="stylesheet" type="text/css" href="./datatable/css/jquery.dataTables.css">    
+    <link rel="stylesheet" href="./datatable/css/responsive.dataTables.min.css">
     <!-- End styles Datatables -->
 
     <!-- Start main core -->
@@ -63,11 +64,14 @@
     <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
     <link rel="stylesheet" href="./css/components.css">
     <!-- End main core -->
-
-
     <style>
+        .dataTables_info{
+            display: none;
+        }
         .dataTables_paginate{
-            grid-column: 1/3 !important;
+            grid-column: 1/3;
+            display: flex;
+            justify-content: center;
         }
     </style>
     
@@ -86,36 +90,21 @@
                         <h3>PQRSF</h3> 
                     </div>
                     <div class="section-2">
-                        <!-- <select name="table-co_length" aria-controls="table-co" class>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                        </select> -->
-                    </div>
-                    <div class="section-3">
-                        <!-- <?php
-                            // if($_GET['type'] != 3){
-                            //     echo '<input type="text" name="" id="inpt-search" placeholder="Buscar">';
-                            // }
-                        ?> -->
-                    </div>
-                    <div class="section-4">
-                    <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="">
-                        <a href="pres_dashboard.php">Volver</a>
+                        <a href="./pres_dashboard.php">Volver
+                                <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="">
+                            </a>
                     </div>
                 </div>
 
                 <div class="con-table-u">
-                    <table id="table-co">
+                    <table id="table-co" class="display responsive nowrap">
                         <thead>
                             <tr>
-                                <td id="first-clm" colspan="2">#</td>
-                                <td>Tipo</td>
-                                <td>Documento</td>
-                                <td>Estado</td>
-                                <td colspan="2" id="last-clm">Acciones</td>
+                                <th class="th-first" data-priority="2">#</th>
+                                <th>Tipo</th>
+                                <th>Documento</th>
+                                <th>Estado</th>
+                                <th data-priority="1" width="10px" class="th-end">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -137,13 +126,16 @@
 
 <!-- Start script datatables -->
 <script src="./datatable/js/jquery.dataTables.js"></script>
+<script src="./datatable/js/dataTables.responsive.min.js"></script>
 <!-- end script datatables -->
  
 <script>
 $(document).ready( function () {
-    $('#table-co').DataTable();
+    $('#table-co').DataTable({
+        responsive: true
+
+    });
 } )
-// $('table').dataTable({bFilter: false, bInfo: false})
 </script>
 </body>
 </html>

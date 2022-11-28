@@ -10,23 +10,27 @@
             ON fk_pk_idTipoPQRSF = idTipoPQRSF
             WHERE NumeroRadicacion = $id";
             $resultado = $db->query($sql);
-
-            while($row = $resultado->fetch_assoc()){
-                $data = [
-                    "tdd" => $row['fk_pk_tipo_documentoU'],
-                    "document" => $row['documento_U'],
-                    "name" => $row['Nombre'],
-                    "cel" => $row['celular_U'],
-                    "phone" => $row['telefono_U'],
-                    "email" => $row['correoElectronico_U'],
-                    "type" => $row['TipoPQRSF'],
-                    "reason" => $row['motivoPQRSF'],
-                    "detail" => $row['detallePQRSF'],
-                    "support" => $row['soportePQRSF'],
-                    "answ" => $row['estadoPQRSF'],
-                    "date" => $row['fechaPQRSF'],
-                ];
+            if($resultado->num_rows > 0){
+                while($row = $resultado->fetch_assoc()){
+                    $data = [
+                        "tdd" => $row['fk_pk_tipo_documentoU'],
+                        "document" => $row['documento_U'],
+                        "name" => $row['Nombre'],
+                        "cel" => $row['celular_U'],
+                        "phone" => $row['telefono_U'],
+                        "email" => $row['correoElectronico_U'],
+                        "type" => $row['TipoPQRSF'],
+                        "reason" => $row['motivoPQRSF'],
+                        "detail" => $row['detallePQRSF'],
+                        "support" => $row['soportePQRSF'],
+                        "answ" => $row['estadoPQRSF'],
+                        "date" => $row['fechaPQRSF'],
+                    ];
+                }
+            }else{
+                $data = FALSE;
             }
+
             return $data;
         }
     }
@@ -71,6 +75,23 @@
         include('./components/navbar.php');
     ?>
     <div class="body-contenido">
+        <?php
+            if(!$data){
+        ?>
+                <div class="con-show-data-no-user">
+                    <div class="alert-show-user">
+                        <div class="con-img-alert-show">
+                            <img src="./assets/img/icons/alert.svg" alt="">
+                        </div>
+                        <div class="alert-show">
+                            <h4>No encontramos resultados</h4>
+                            <p>Asegúrate de que todo esté bien escrito. <a href="./neg_dat_pres_U_index.php">Volver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }else{
+        ?>
         <div class="con-show">
             <div class="head-show">
                 <div class="sect1-show">
@@ -156,11 +177,12 @@
 
                     </div>
                     <div class="actions-show">
-                        <a href="javascript: history.go(-1)" class="show-act">Volver</a>
+                        <a href="./neg_dat_pres_pqrsf_index.php" class="show-act">Volver</a>
                         <a href="./neg_dat_pqrsf_update.php?id=<?php echo $_GET['id'] ?>" class="show-act"><?php echo $data['answ'] != 1 ? 'Respondido' : 'En tramite' ; ?></a>
                     </div>
             </div>
         </div>
+        <?php }?>
     </div>
 </div>
 

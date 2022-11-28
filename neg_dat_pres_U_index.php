@@ -58,11 +58,11 @@
 
                 ?>
                 <tr class="<?php echo $iterable ? ' ' : 'row-secondary' ?>">
-                    <td colspan="2" id="first-clm"><?php echo $rol ?></td>
-                    <td><?php echo $document ?></td>
-                    <td id="hidden-res"><?php echo $name ?></td>
+                    <td class="th-first"><?php echo $document ?></td>
+                    <td><?php echo $rol ?></td>
+                    <td><?php echo $name ?></td>
                     <td><?php echo $email ?></td>
-                    <td id="last-clm" class="con-actions">
+                    <td class="con-actions th-end">
                         <a href="./neg_dat_pres_U_show.php?tdd=<?php echo $tdd ?>&document=<?php echo $numDocument ?>">
                             <img src="./assets./img/icons/eye.svg" alt="">
                         </a>
@@ -132,7 +132,16 @@
     <link rel="stylesheet" href="./css/components.css">
     <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
     <!-- End main core -->
-    
+    <style>
+        .dataTables_info{
+            display: none;
+        }
+        .dataTables_paginate{
+            grid-column: 1/3;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -148,24 +157,9 @@
                         <h3>Busqueda <?php echo $searchType ?></h3> 
                     </div>
                     <div class="section-2">
-                        <!-- <select name="table-co_length" aria-controls="table-co" class>
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                        </select> -->
-                    </div>
-                    <div class="section-3">
-                        <!-- <?php
-                            // if($_GET['type'] != 3){
-                            //     echo '<input type="text" name="" id="inpt-search" placeholder="Buscar">';
-                            // }
-                        ?> -->
-                    </div>
-                    <div class="section-4">
-                    <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="">
-                        <a href="pres_gestionUs.php">Volver</a>
+                        <a href="./pres_gestionUs.php">Volver
+                            <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="">
+                        </a>
                     </div>
                 </div>
 
@@ -173,11 +167,11 @@
                     <table id="table-co" class="display responsive nowrap">
                         <thead>
                             <tr>
-                                <td id="first-clm" colspan="2">Rol</td>
-                                <td>Documento</td>
-                                <td id="hidden-res">Nombre</td>
-                                <td>Email</td>
-                                <td colspan="2" id="last-clm">Acciones</td>
+                                <th data-priority="2" class="th-first">Documento</th>
+                                <th>Rol</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th data-priority="1" width="10px" class="th-end">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -203,7 +197,10 @@
  
 <script>
 $(document).ready( function () {
-    $('#table-co').DataTable();
+    $('#table-co').DataTable({
+        responsive: true
+
+    });
 } )
 </script>
 </body>
