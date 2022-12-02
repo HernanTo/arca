@@ -1,12 +1,12 @@
 .con-login{
     display: grid;
-    grid-template-columns: 100vw;
     column-gap: 5vw;
     justify-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
     height: calc(100vh - 100px);
     align-items: center;
+    padding: 0px 15px;
 }
 .sect-img{
     display: none;
@@ -85,11 +85,12 @@
 }
 .con-btns{
     display: grid;
-    grid-template-columns: 45% 45%;
-    justify-content: space-between;
-    grid-template-rows: 50px;
+    grid-template-columns: 60%;
+    justify-content: center;
+    grid-template-rows: 50px 50px;
     margin-top: 20px;
     margin-bottom: 40px;
+    row-gap: 20px   ;
 }
 .con-btns a, .con-btns input{
     width: 100%;
@@ -177,5 +178,10 @@
         margin-right: 0px;
         object-fit: cover;
     }
-
+    .con-btns{
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        justify-content: space-between;
+        grid-template-rows: 50px;
+    }
 }

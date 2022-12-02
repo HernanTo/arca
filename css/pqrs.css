@@ -5,10 +5,12 @@ body{
     padding-top: 45px;
     padding-left: 40px;
     padding-right: 40px;
+    min-width: 240px;
 }
 .con-form-pqrs form{
     display: grid;
     row-gap: 30px;
+    grid-template-columns: 100%;
 }
 .head-form{
     display: grid;
@@ -139,10 +141,11 @@ input[type="file"]{
 }
 .foo-form{
     display: grid;
-    grid-template-columns: repeat(2, 160px);
-    grid-template-rows:  50px;
+    grid-template-columns: 160px;
+    grid-template-rows:  50px 50px;
     justify-content: center;
     column-gap: 115px;
+    row-gap: 20px;
     padding-bottom: 40px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -183,21 +186,26 @@ input[type="file"]{
     justify-content: center;
     align-content: center;
     font-family: 'Poppins';
-    font-weight: bold;
     /* margin-bottom: 20px; */
 }
 .con-alert-modal p{
     padding: 0px;
-    font-size: 17px
+    font-size: 17px;
+    text-align: center;
+    font-weight: 550;
 }
 .fade{
     background: rgba(23, 32, 42, 0.25); 
 }
+.btn-close{
+    background: transparent url(../assets/img/icons/cross-circle.svg) center/1.5em auto no-repeat;
+    cursor: pointer !important;
+}
 @media (min-width: 700px){
     .con-form-pqrs{
         padding-top: 45px;
-        padding-left: 125px;
-        padding-right: 125px;
+        /* padding-left: 125px;
+        padding-right: 125px; */
     }
     .body-form-ba{
         grid-template-columns: repeat(2, 45%);
@@ -218,8 +226,16 @@ input[type="file"]{
     .con-file{
         grid-column: 1/2;
     }
+    .foo-form{
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows:  50px;
+    }
 }
 @media (min-width: 1200px){
+    .con-form-pqrs{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
     .body-form-ba{
         grid-template-columns: repeat(8, 130px);
         column-gap: 0px;
