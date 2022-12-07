@@ -4,7 +4,7 @@
     $titlePage = "Bienvenido a Arca";
     $descPage = "Hola ". $nameUs . ", comienza a explorar.";
 ?>
-    <!-- <a href="neg_dat_pres_U_index.php">Ver todos los usuarios</a>
+<!-- <a href="neg_dat_pres_U_index.php">Ver todos los usuarios</a>
 
     <form action="neg_dat_pres_U_index.php" method="get">
         <p>Selecciona el tipo de rol que deseas buscar.</p>
@@ -31,13 +31,12 @@
         <input name="document" id="documento" type="text" placeholder="Numero de documento"><br>
         <button type="submit" class="btn">Buscar</button>
     </form> -->
-
 <?php
     // Section Admin
-    
     if(isset($_SESSION['administrador'])){
         if($_SESSION['administrador'] == 1){
             $a;
+            
         }
     }
     // Section Secretaria
@@ -45,7 +44,6 @@
     if(isset($_SESSION['secretaria'])){
         if($_SESSION['secretaria'] == 1){
             $a;
-            
         }
     }
     // Section Doctor
@@ -72,7 +70,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 
     <link rel="stylesheet" href="./css/main.css">
@@ -87,71 +85,44 @@
     <?php
         include('./components/sidebar.php');
         include('./components/navbar.php');
-        ?>  <?php
-                if(isset($_SESSION['paciente'])){
-                    if($_SESSION['paciente'] == 1){
-            ?>  
-            <div class="body-contenido">
-                <div class="con-citas">
-                    <div class="form-citas">
-                        <form action="" method="" class="con-form-citas">
-                            <div class="head-form">
-                                <h3>Citas medicas</h3>
-                            </div>
-                            <div class="body-form">
-                                <label id="">Agenda tus citas medicas aqui.</label>
-                            </div>
-                            <div class="foo-form">
-                                <button type="submit">Agendar cita</button>
-                            </div>
-                        </form>
+    ?> 
+    <?php
+        if(isset($_SESSION['paciente'])){
+            if($_SESSION['paciente'] == 1){
+    ?>  
+    <div class="body-contenido">
+        <div class="con-dashboard-paciente">
+            <div class="con-citas">
+                <div class="con-form-citas">
+                    <div class="head-form">Citas médicas</div>
+                    <div class="body-form">Agenda tus citas médicas aquí.</div>
+                    <div class="foo-form">
+                        <button type="submit">Agendar cita</button>
                     </div>
-                    <div class="form-pqrsf">
-                        <form action="" method="" class="con-form-pqrsf">
-                            <div class="head-pqrsf">
-                                <h3>¿Problemas con Arca?</h3>
-                            </div>
-                            <div class="body-pqrsf">
-                                <label id="label-fom">Ingresa al modulo de PQRSF y realiza tu queja.</label>
-                            </div>
-                            <div class="foo-pqrsf">
-                                <a href="" class="flecha-pqrsf">
-                                Modulo de PQRSF
-                                <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="emociones">
-                                <a href="">
-                                    <img src="./assets/img/emociones.png" alt="">
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                        <div class="title-citas">
-                            <h1>Mis citas medicas</h1>
-                                <div class="body-cm">
-                                    <div class="names-cm">
-                                        Nombres:<br>
-                                        Documento:<br>
-                                        Especialista:<br>
-                                        Consultorio:<br>
-                                        Fecha:<br>
-                                        EPS:<br>
-                                    </div>
-                                    <!--prueba-->
-                                    <div class="dates-cm">
-                                        <?php
-                                            echo $nameUs
-                                        ?>
-                                    </div>
-                
-                                </div>
-                        </div>
                 </div>
+                <div class="con-form-pqrsf">
+                    <div class="head-form">¿Problemas con Arca?</div>
+                    <div class="body-form">Ingresa al módulo de PQRSF.</div>
+                    <a href="" class="flecha-pqrsf">Módulo de PQRSF
+                        <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="De clic aquí para ingresar al módulo de PQRSF">
+                    </a>
+                    <a href="" class="emociones">
+                        <img src="./assets/img/emociones.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="con-cm">
+                <div class="title-cm">Mis citas médicas</div>
                 <?php
-                    }
-                }
+                    include('pres_neg_dat_C_show.php');
                 ?>
+            </div>
+    <?php
+            }
+        }
+    ?>
+        </div>
+    </div>
 </div>
 
 <!-- JavaScript Bundle with Popper -->
