@@ -1,5 +1,5 @@
 <?php
-class usuario{
+class user{
     public function inhabilitarUser($tdd, $docUser){
         include ('data_conexion.php');
         

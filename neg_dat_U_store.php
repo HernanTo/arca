@@ -1,5 +1,5 @@
 <?php
-    class usuario{
+    class user{
         public function crearUser($usuario_rol , $tdd, $docuUser, $pNombre, $sNombre, $pApellido, $sApellido, $fechaNa, $direccion, $email, $celNum, $especialidad, $clave, $typeRegister){
             include("data_conexion.php");
 
