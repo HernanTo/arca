@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.con-help-center-v{
+    display: grid;
+    /* grid-template-columns: 250px; */
+    width: 85vw;
+    min-width: 250px;
+    padding-top: 40px;
+    padding-left: 40px;
+    justify-items: center;
+}
+.aside-help-center{
+    background: #F4F6F7;
+}
+.info-help{
+    display: grid;
+    height: 140px;
+    row-gap: 20px;
+    align-content: center;
+}
+.info-help h3{
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 27px;
+    margin: 0px;
+    padding: 0px;
+}
+.info-help p{
+    font-family: 'Nunito';
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+.con-inpt{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+.con-inpt img{
+    position: absolute;
+    right: 20px;
+    top: 16.195px;
+    height: 20px;
+    z-index: 1;
+}
+.con-inpt input{
+    padding:12px 0px;
+    background-color: rgb(244 246 247/0.7);
+    position: relative;
+    z-index: 2 !important;
+}
+
+.con-inpt  input{
+    font-family: 'Nunito';
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.622);
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding-left: 20px;
+
+}
+.con-items{
+    display: grid;
+    grid-auto-rows: 65px;
+    row-gap: 10px;
+    margin-bottom: 30px;
+}
+.item-help{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: #FBFCFC;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    color: rgba(23, 32, 42, 0.5);
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.05);
+    transition: all 0.3s;
+}
+.item-help img{
+    height: 35px;
+}
+.item-help img{
+    display: none;
+}
+
+.item-help-selected{
+    background: rgba(71, 61, 139, 0.5);
+    color: var(--main-color);
+
+}
+.item-help-selected img{
+    display: block;
+}
+.footer-help-center{
+    background: rgba(71, 61, 139, 0.8);
+    height: 190px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    color: white;
+    padding: 30px 25px;
+    display: grid;
+    align-content: space-between;
+}
+.footer-help-center h4, .footer-help-center p, .footer-help-center a{
+    padding: 0px;
+    margin: 0px;
+}
+.footer-help-center a{
+    background: #F4F6F7;
+    font-family: 'Poppins';
+    font-weight: 550;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    border-style:inset;
+}
+.footer-help-center h4{
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 20px;
+}
+.footer-help-center p{
+    font-family: 'Nunito';
+    font-size: 17px;
+}
+
+.body-help-center{
+   margin-bottom: 30px;
+   width: 100%;
+}
+
+.accordion-button:not(.collapsed){
+    background: rgba(71, 61, 139, 0.15);
+    color: var(--main-color);
+    font-weight: bold;
+}
+.accordion-button{
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    font-weight: 600;
+    height: 75px;
+    color: rgba(23, 32, 42, 0.5);
+}
+.accordion-body{
+    font-family: 'Nunito';
+}
+.accordion-item{
+    border: none;
+}
+.accordion-button{
+    border-radius: 10px;
+    background: white;
+}
+hr{
+    margin: 0px;
+    background-color: #17202A !important;
+    opacity: 100;
+    height: 1px !important;
+    border: none;
+    color: #17202A;
+}
+.accordion-button::after{
+    background-image: url(../assets/img/icons/+acordion.svg);
+    width: 32px;
+    height: 32px;
+    background-size: 2rem;
+    transition: none;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url(../assets/img/icons/-acordion.svg);
+
+}
+.item-help:hover{
+    cursor: pointer;
+    background: rgba(71, 61, 139, 0.5);
+    color: var(--main-color);
+}
+.acordion-sect{
+    display: none;
+}
+.acordion-sect-selected{
+    display: block !important;
+}
+@media (min-width:1020px){
+    .con-help-center-v{
+        grid-template-columns: 320px calc(70% - 320px);
+        width: 99.3vw;
+        padding-right: 40px;
+        justify-content: center;
+        column-gap: 100px;
+    }
+}

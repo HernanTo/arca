@@ -1,6 +1,4 @@
 <?php
-// Este archivo se puede mejorar y/o cambiar si gusta
-
 function canUsersPqrsf(){
     include ('../data_conexion.php');
     $sql = "SELECT 
@@ -36,13 +34,4 @@ function canUsersPqrsf(){
 
     return [$canUsers, $canPqrsf];
 }
-
-// $valores = canUsersPqrsf();
-// echo $valores[0][2];
-
-// ! Important
-// Para usarla se debe tener en cuenta la ubicacion de cada array, en este caso los primeros corchetes determinan a que consulta acceder
-// [0] = usuarios y [1] = pqrsf
-// Por otro lado, los segundos corchetes determinan la naavegacion de la consulta seleccionada
-
 ?>
