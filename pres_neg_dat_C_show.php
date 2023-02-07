@@ -6,20 +6,22 @@
             $nameUs = $_SESSION["pNombre_U"];
             $tdd = $_SESSION['tdd'];
             $docu = $_SESSION['docu'];
-            $sql = "SELECT * FROM citasmedicas WHERE tddPaciente = '$tdd' AND docPaciente = '$docu'";
+            $sql = "SELECT * FROM citasmedicas WHERE tddPaciente = '$tdd' AND docPaciente = '$docu' LIMIT 0,3";
            
             $resultado = $db -> query($sql);
-            $iterable = TRUE;
-            echo "<div class='$iterable ? ` ` : `con-info-cm-none`'>";
+            $iterable = true;
+            $mostrar_contenedor = true;
             while($row = $resultado->fetch_assoc()){
-                
+                if ($mostrar_contenedor) {
+                    echo "<div class='con-info-cm'>";
+                    $mostrar_contenedor = false;
+                }
                 $idCita = $row ["id_cita"];
                 $tipoCita = $row["tipo_cita"];
                 $fechaCita = $row["fecha"];
                 $horaCita = $row["hora"];
 
             ?>
-            <div class="con-info-cm">
                 <div class='info-cm'>
                     <div class='head-info-cm'><?php echo $tipoCita ?></div>
                     <div class='body-info-cm'>
@@ -29,7 +31,7 @@
                     <div class='date-info-cm'>
                         <div class='title-date-info'>
                             <div class='title-date'>01</div>
-                            <div class='title-dat'>01</div>
+                            <div class='title-date'>01</div>
                             <div class='title-date'>2022</div>
                         </div>
                         <div class='text-date-info'>
@@ -40,9 +42,7 @@
                     </div>
                     <a class='footer-info-cm' href='#'>Ver más</a>
                 </div>
-            </div>
     <?php
-            $iterable = !$iterable;
                 $cont=$cont+1;
             }
             if($cont=="0"){
@@ -50,6 +50,8 @@
                     <div class='img-scm'><img src='./assets/img/sin_citas.svg' alt=''></div>
                     <div class='text-scm'>No tienes citas médicas agendadas</div>
                 </div>";
+            }else{
+                echo "</div>";
             }
         }
     }
