@@ -229,7 +229,7 @@
                     <div class="con-form-users">
                         <div class="head-form">Usuarios</div>
                         <div class="body-form">Gestiona tus usuarios aqui.</div>
-                        <a href="" class="flecha-users">Gestionar
+                        <a href="pres_gestionUs.php" class="flecha-users">Gestionar
                             <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="De clic aquí para ingresar al módulo de PQRSF">
                         </a>
                         <a href="" class="info-users">
