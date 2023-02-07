@@ -1,0 +1,114 @@
+.con-dashboard-admin{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 23px 350px;
+}
+.title-users{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 23px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 22px;
+}
+.flecha-users{
+    font-family: 'Poppins';
+    gap: 20px;
+    text-decoration: none;
+    color: #17202A;
+    opacity: 60%;
+}
+.con-info-users{
+    display: grid;
+    grid-row: 2/2;
+    grid-template-columns: repeat(4, 375px);
+    padding-top: 30px;
+}
+.num-pacientes, .num-doctores, .num-secretarias, .num-administradores{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px;
+    justify-items: center;
+    align-items: center;
+}
+.num-administradores{
+    position: relative;
+}
+.btn-admin{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    left: 130px;
+    top: 80px;
+}
+.btn-admin > img{
+    width: 20px;
+}
+.cont-user{
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 35px;
+}
+.name-user{
+    font-weight: lighter;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+  @media (max-width: 1109px){
+    .con-info-users{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 15px;
+      padding-top: 45px;
+    }
+    .title-users{
+        grid-template-columns: 60% auto;
+    }
+}
+  @media (max-width: 980px) {
+    .con-dashboard-admin{
+        grid-template-rows: 23px auto;
+    }
+    .con-info-users {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      row-gap: 15px;
+      padding-top: 45px;
+    }
+    .title-users{
+        grid-template-columns: 70% auto;
+    }
+}
+
+    @media (max-width: 906px){
+    .title-users{
+        grid-template-columns: 1fr;
+        grid-template-rows: 23px 23px;
+        row-gap: 10px;
+        justify-items: center;
+        align-items: center;
+        }
+    .flecha-users{
+        grid-row: 2/2;
+        }
+}
+    @media (max-width: 570px){
+        .con-info-users {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            align-items: center;
+            row-gap: 15px;
+            padding-top: 45px;
+          }
+    }
