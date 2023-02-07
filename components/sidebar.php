@@ -135,11 +135,11 @@
             </div>
             <h3>Centro de ayuda</h3>
             <p>Tienes problemas con Arca. Resuelve tus dudas aqui.</p>
-            <a href="#">Ir a centro de ayuda</a>
+            <a href="./pres_help_center.html">Ir a centro de ayuda</a>
         </div>
 
         <!-- btn cuando el menu no esta desplegado -->
-        <a class="item-help" href="">
+        <a class="item-help" href="./pres_help_center.html">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/help.svg" alt="">

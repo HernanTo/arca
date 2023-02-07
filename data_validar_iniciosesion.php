@@ -42,12 +42,12 @@
         }
         }
         if ($cont=="0"){
-            print "<script>alert('Usuario incorrecto'); window.location='pres_login.html';</script>";
+            print "<script>alert('Usuario incorrecto'); window.location='pres_login.php';</script>";
             $_SESSION['logueado']=0;
         }
         if($cont > "0"){
             if($estado == 0){
-                print "<script>alert('Usuario inactivo'); window.location='pres_login.html';</script>";
+                print "<script>alert('Usuario inactivo'); window.location='pres_login.php';</script>";
                 $_SESSION['logueado']=0;
             }
             if($estado == 1){

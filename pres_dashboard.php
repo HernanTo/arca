@@ -107,7 +107,7 @@
                     <div class="con-form-pqrsf">
                         <div class="head-form">¿Problemas con Arca?</div>
                         <div class="body-form">Ingresa al módulo de PQRSF.</div>
-                        <a href="" class="flecha-pqrsf">Módulo de PQRSF
+                        <a href="./pres_pqrsf.html" class="flecha-pqrsf">Módulo de PQRSF
                             <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="De clic aquí para ingresar al módulo de PQRSF">
                         </a>
                         <a href="" class="emociones">
