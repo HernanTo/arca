@@ -107,7 +107,7 @@
                     <div class="con-form-pqrsf">
                         <div class="head-form">¿Problemas con Arca?</div>
                         <div class="body-form">Ingresa al módulo de PQRSF.</div>
-                        <a href="./pres_pqrsf.html" class="flecha-pqrsf">Módulo de PQRSF
+                        <a href="pres_pqrsf.html" class="flecha-pqrsf">Módulo de PQRSF
                             <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="De clic aquí para ingresar al módulo de PQRSF">
                         </a>
                         <a href="" class="emociones">
@@ -218,46 +218,28 @@
                 ?>   
         <div class="body-contenido">
             <div class="con-dashboard-admin">
-                <div class="title-users">Usuarios
-                    <div class="view-users">
-                        <a href="pres_gestionUs.php" class="flecha-users">Gestionar usuarios
+                <div class="con-horarios-admin">
+                    <div class="con-form-horarios-admin">
+                        <div class="head-form">Horarios</div>
+                        <div class="body-form">Programa la disponibilidad de los doctores.</div>
+                        <div class="foo-form">
+                            <button href="" type="submit">Agendar</button>
+                        </div>
+                    </div>
+                    <div class="con-form-users">
+                        <div class="head-form">Usuarios</div>
+                        <div class="body-form">Gestiona tus usuarios aqui.</div>
+                        <a href="" class="flecha-users">Gestionar
                             <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="De clic aquí para ingresar al módulo de PQRSF">
+                        </a>
+                        <a href="" class="info-users">
+                            <img class="img-info-users" src="./assets/img/icons/programador 1.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="con-info-users">
-                        <div class="num-pacientes">
-                            <a href="" class="icon">
-                                <img src="./assets/img/icons/Paciente.svg" alt="">
-                            </a>
-                            <div class="cont-user">34</div>
-                            <div class="name-user">Pacientes</div>
-                        </div>
-                        <div class="num-doctores">
-                            <a href="" class="icon">
-                                <img src="./assets/img/icons/Paciente+.svg" alt="">
-                            </a>
-                            <div class="cont-user">16</div>
-                            <div class="name-user">Doctores</div>
-                        </div>
-                        <div class="num-secretarias">
-                            <a href="" class="icon">
-                                <img src="./assets/img/icons/Secretaria-icon.svg" alt="">
-                            </a>
-                            <div class="cont-user">4</div>
-                            <div class="name-user">Secretarias</div>
-                        </div>
-                        <div class="num-administradores">
-                            <a href="" class="icon">
-                                <img src="./assets/img/icons/Paciente.svg" alt="">
-                            </a>
-                            <a href="" class="btn-admin">
-                                <img src="./assets/img/icons/ajustes 1.svg" alt="Administradores">
-                            </a>
-                            <div class="cont-user">3</div>
-                            <div class="name-user">Administradores</div>
-                        </div>
-                    </div>
+                <div class="con-pqrsf">
+                    <div class="title-pqrsf">PQRSF recientes</div>
+                    <?php include('pres_neg_dat_admin_pqrsf_show_.php');?>
                 </div>
                 <?php
                         }
@@ -272,4 +254,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
