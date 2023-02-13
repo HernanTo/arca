@@ -183,7 +183,7 @@
                         <div class="head-form">Horarios</div>
                         <div class="body-form">Agenda tus horarios medicos aqui.</div>
                         <div class="foo-form">
-                            <button href="" type="submit">Gestionar</button>
+                            <button href="pres_gestionHorarios.php" type="submit">Gestionar</button>
                         </div>
                     </div>
                     <div class="con-form-diagnosticos">
@@ -223,7 +223,7 @@
                         <div class="head-form">Horarios</div>
                         <div class="body-form">Programa la disponibilidad de los doctores.</div>
                         <div class="foo-form">
-                            <button href="" type="submit">Agendar</button>
+                            <button><a href="pres_gestionHorarios.php"  style="color: inherit; text-decoration: none;">Agendar</a></button>
                         </div>
                     </div>
                     <div class="con-form-users">
@@ -254,5 +254,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
