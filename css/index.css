@@ -1,0 +1,494 @@
+body{
+    background: #F4F6F7;
+}
+::-webkit-scrollbar{
+    width: 7px;
+    /* background: rgb(50 40 108 / 0.4); */
+    background: none;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(50 40 108 / 1);
+    border-radius: 10px;
+}
+
+.container-main{
+    min-width: 290px;
+}
+/* start banner */
+.banner{
+    background: url('../assets/img/banner.png');
+    background-position: top 10% left 56%;
+    object-fit: contain;
+    width: 100%;
+    height: 670px;
+}
+.header{
+    height: 66px;
+}
+.banner .header .nav{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+.nav .item-menu:nth-child(2), .nav .item-menu:nth-child(3), .nav .item-menu:nth-child(4){
+    display: none;
+}
+.header .nav .item-menu img{
+    width: 120px;
+}
+.nav .item-menu:nth-child(5){
+    background: var(--main-color);
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 504;
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+    height: 48px;
+    display: grid;
+    align-items: center;
+    border-radius: 15px;
+}
+.body-banner{
+    height: 605px;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    width: 85%;
+    margin-left: 7.5%;
+    grid-template-rows: 260px 180px;
+    align-content: flex-end;
+    gap:40px;
+}
+.info-banner{
+    display: grid;
+    gap: 10px;
+}
+.info-banner h2, .info-banner p{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+.info-banner h2{
+    font-family: 'Poppins';
+    font-weight:  bold;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.info-banner p{
+    font-family: 'Nunito';
+    font-weight: lighter;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.con-btn-banners{
+    /* background: green; */
+    display: grid;
+    justify-content: center;
+}
+.con-btn-banners a{
+    width: 170px;
+    height: 65px;
+    border-radius: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+.btn-banner:nth-child(1){
+    color: rgba(23, 32, 42, 0.5);
+    background: rgba(251, 252, 252, 0.7);
+}
+.btn-banner:nth-child(2){
+    color: #FBFCFC;
+    background: rgba(71, 61, 139, 0.75);
+}
+/* end banner */
+/* start section comments */
+.con-comment{
+    width: 85%;
+    margin-left: 7.5%;
+    height: 670px;
+    display: grid;
+    grid-template-rows: 15% 75%;
+    gap: 5%;
+}
+.h-comment{
+    display: grid;
+    align-content: flex-end;
+    justify-content: flex-start;
+}
+.h-comment h2{
+    font-family: 'Poppins';
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    margin: 0px;
+    font-size: 1.6rem;
+}
+.h-comment hr{
+    width: 20%;
+    height: 6px;
+    border-radius: 10px;
+    background: var(--main-color);
+    border: 0px solid black;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+.b-comment{
+    /* background: blue; */
+}
+/* end section comments */
+/* start section info about */
+.con-info-about{
+    /* background: red; */
+    display: grid;
+    grid-template-rows: 200px;
+    width: 85%;
+    margin-left: 7.5%;
+}
+.info-about-h{
+    display: grid;
+    align-content: flex-end;
+    grid-template-rows: 35% 55%;
+}
+.info-about-h h2, .info-about-h p{
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    align-items: center;
+}
+.info-about-h h2{
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+}
+.info-about-h p{
+    font-family: 'Nunito';
+    font-size: 1.1rem;
+}
+.info-about-b{
+    display: grid;
+    justify-content: center;
+    margin-top: 40px;
+    row-gap: 30px;
+}
+.card{
+    background: #FBFCFC;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    height: 210px;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px 1px rgba(23, 32, 42, 0.204);
+}
+.card-h{
+    display: grid;
+    justify-content: center;
+    align-content: flex-end;
+    margin-bottom: 10px;
+}
+.card-h h3{
+    font-family: 'Poppins';
+    font-weight: bold;
+    border-bottom: 3px solid rgba(71, 61, 139, 0.4);
+    padding-bottom: 4px;
+    margin: 0px;
+}
+.card-b{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 76%;
+    margin-left: 12%;
+    font-family: 'Nunito';
+    text-align: center;
+}
+.card p{
+    margin: 0px;
+    padding: 0px;
+}
+.card-b ul{
+    padding: 0px;
+    text-align: center;
+}
+/* end section info about */
+/* start section service */
+.sect-serv-l{
+    display: none;
+}
+.service{
+    padding-top: 100px;
+    width: 85%;
+    margin-left: 7.5%;
+}
+.sect-serv-r .info-serv{
+    height: 150px;
+}
+.info-serv h2{
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.info-serv p{
+    font-family: 'Nunito';
+    font-size: 1.1rem;
+    margin: 0px;
+    padding: 0px;
+}
+.con-cards-ser{
+    display: grid;
+    justify-content: center;
+    margin-top: 40px;
+    row-gap: 65px;
+}
+.card-s{
+    background: #FBFCFC;
+    width: 100%;
+    height: 200px;
+    max-width: 290px;
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px 1px rgba(23, 32, 42, 0.204);
+    position: relative;
+}
+.card-s-b{
+    display: grid;
+    grid-template-rows: 75px 115px;
+    padding-left: 28px;
+    padding-right: 28px;
+    row-gap: 5px;
+}
+.card-s-h{
+    position: absolute;
+    top: -32.5px;
+    left: 28px;
+}
+.card-s-h img{
+    width: 65px;
+}
+.card-s-t h5, .card-s-i p{
+    padding: 0px;
+    margin: 0px;
+}
+.card-s-t {
+    display: grid;
+    align-content: flex-end;
+}
+.card-s-i{
+    display: grid;
+    align-content: center;
+}
+.card-s-t h5{
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.card-s-i p{
+    font-family: 'Nunito';
+    font-weight: lighter;
+}
+/* end section service */
+/* start sect contact us */
+.con-contactus{
+    display: grid;
+    grid-template-rows: 300px 250px;
+    padding-top: 70px;
+}
+.sect-cu-l{
+    margin-left: 7.5%;
+}
+.sect-cu-l .con-cu-h h2{
+    font-family: 'Poppins';
+    font-size: 1.6rem;
+    margin: 0px;
+    padding: 0px;
+}
+.sect-cu-l .con-cu-h hr{
+    width: 20%;
+    height: 6px;
+    border-radius: 10px;
+    background: var(--main-color);
+    border: 0px solid black;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+.con-cu-b{
+    margin-bottom: 50px;
+    padding-top: 5px;
+}
+.con-cu-b p{
+    font-family: 'Nunito';
+    font-weight: 350;
+    font-size: 1.1rem;
+}
+.con-cu-f{
+    display: grid;
+    grid-template-columns: repeat(4,35px);
+    gap: 15px;
+}
+.con-cu-f a img{
+    width: 100%;
+}
+.sect-cu-r{
+    margin: 0px;
+    width: 100%;
+}
+.sect-cu-r iframe{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+/* end sect contact us */
+/* start footer  */
+footer{
+    background: #17202A;
+    display: grid;
+    padding-top: 50px;
+    row-gap: 35px;
+}
+.con-logo-f{
+    padding-left: 7.5%;
+}
+.con-logo-f img{
+    width: 120px;
+}
+.short-f{
+    display: grid;
+    row-gap: 10px;
+    padding-left: 7.5%;
+
+}
+.short-f a{
+    font-family: 'Nunito';
+    text-decoration: none;
+    color: #6D6D6D;
+}
+.social-bar-f{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(6, 30px);
+    gap: 15px;
+    padding-left: 7.5%;
+
+}
+.social-bar-f a img{
+    width: 100%;
+}
+.ico-yt img{
+    padding-top: 10px;
+    padding-left: 2px;
+}
+.rf{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Nunito';
+    color: #6D6D6D;
+}
+/* end footer */
+
+@media (min-width: 720px){
+/* start banner */
+.info-banner h2{
+    font-size: 2.4rem;
+}
+ .info-banner p{
+    font-size: 1.2rem;
+    padding:  0px 60px;
+
+ }
+ .item-menu:nth-child(1){
+    margin-left: 7.5vw;
+    
+ }
+ .banner .header .nav{
+    justify-items: left;
+    position: relative;
+ }
+ .item-login{
+    position: absolute;
+    right: 7.5vw;
+    top: 9px;
+ }
+ .con-btn-banners{
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: 60px;
+    column-gap: 50px;
+ }
+
+ /* end banner */
+ /* start about us */
+.info-about-b{
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, 210px);
+    gap: 30px;
+}
+ /* end about us */
+ /* start service */
+ .con-cards-ser{
+    grid-template-columns: repeat(2, 290px);
+    column-gap: 20px;
+ }
+ /* end service */
+}
+@media (min-width: 1024px){
+/* start banner */
+.info-banner p{
+    padding: 0px 140px;
+}
+.nav .item-menu:nth-child(2), .nav .item-menu:nth-child(3), .nav .item-menu:nth-child(4){
+    display: block;
+}
+ /* end  banner */
+ /* start about us */
+ .info-about-b{
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(1, 210px);
+    gap: 30px;
+}
+ /* end about us */
+ /* start contact us */
+ .con-contactus{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px;
+    align-items: center;
+ }
+ .sect-cu-r{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100%;
+ }
+ /* end contact us */
+ /* start footer */
+ footer{
+    margin-top: 120px;
+    justify-content: center;
+    row-gap: 55px;
+ }
+ .short-f{
+    grid-template-columns: repeat(5, 150px);
+    justify-items: center;
+    column-gap: 10px;
+    padding: 0px;
+
+ }
+ .con-logo-f{
+    padding: 0px;
+    display: grid;
+    justify-items: center;
+ }
+ .social-bar-f{
+    padding: 0px;
+    display: grid;
+    justify-content: center;
+    column-gap: 40px;
+ }
+ /* end footer */
+}

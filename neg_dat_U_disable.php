@@ -23,6 +23,6 @@ class user{
         }
     }
 }
-    $crud = new usuario();
+    $crud = new user();
     $crud->inhabilitarUser($_GET["tdd"] , $_GET["document"]);   
 ?>

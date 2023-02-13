@@ -62,7 +62,7 @@
     $titlePage = "Gestion de usuarios.";
     $descPage = "Gestiona a tus usuarios de una manera sencilla.";
 
-    $classUser = new User;
+    $classUser = new user;
     $data = $classUser->show($_GET['tdd'], $_GET['document'], $_SESSION['role'], $_SESSION['specialty']);
 
 ?>

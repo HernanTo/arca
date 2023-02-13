@@ -21,7 +21,7 @@
         
         }
     }
-    $crud = new usuario();
+    $crud = new user();
     $crud->crearUser(
         isset($_POST['usuarioRol'])? $_POST['usuarioRol'] :  $_POST['usuarioRol'] = '4',
         $_POST["fk_pk_tipo_documentoU"], 
