@@ -1,10 +1,5 @@
 <?php 
 include ('seguridad.php');
-if(isset($_SESSION['doctor'])){
-    if($_SESSION['doctor'] == 1){
-        header('Location: pres_dashboard.php');
-    }
-}
 if(isset($_SESSION['paciente'])){
     if($_SESSION['paciente'] == 1){
         header('Location: pres_dashboard.php');
@@ -41,7 +36,7 @@ $descPage = "Gestiona los horarios de tus doctores y citas medicas.";
         ?>
         <div class="body-contenido">
             <div class="con-cm-horarios">
-                <a href="pres_gestionUs.php" class="flecha-cm">Ver todas las citas medicas
+                <a href="" class="flecha-cm">Ver todas las citas medicas
                     <img src="./assets/img/icons/flecha-pequena-derecha 1.svg" alt="De clic aquí para ver todas las citas medicas">
                 </a>
                 <div class="con-new-cm">
@@ -108,7 +103,7 @@ $descPage = "Gestiona los horarios de tus doctores y citas medicas.";
                                             <option value="1">13 Febrero 2023 - 18 Febrero 2023</option>
                                             <option value="2">13 Febrero 2023 - 18 Febrero 2023</option>
                                         </select>
-                                        <label for="floatingSelect">Consultorio</label>
+                                        <label for="floatingSelect">Semana de agendamiento</label>
                                         <span class="ico-input ico-input-select"><img src="./assets/img/icons/desplegable.svg" alt=""></span>
                                     </div>
                             </div>
@@ -119,13 +114,13 @@ $descPage = "Gestiona los horarios de tus doctores y citas medicas.";
                                             <option value="1">Mañana (8 am - 11 am)</option>
                                             <option value="2">Mañana (8 am - 11 am)</option>
                                         </select>
-                                        <label for="floatingSelect">Consultorio</label>
+                                        <label for="floatingSelect">Horario</label>
                                         <span class="ico-input ico-input-select"><img src="./assets/img/icons/desplegable.svg" alt=""></span>
                                     </div>
                             </div>
                         </div>
                         <div class="con-btn-cm">
-                            <input id="btn-cm" type="submit" value="Registrarse"></input>
+                            <input id="btn-cm" type="submit" value="Registrar"></input>
                         </div>
                     </div>
                 </div>
