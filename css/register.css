@@ -6,22 +6,31 @@ body{
 }
 .con-register{
     display: grid;
-    grid-template-columns: 310px;
-    row-gap: 30px;
+    grid-template-columns: 50%;
+    grid-template-rows: 20% 75%;
     justify-content: center;
-    padding-top: 20px;
+    row-gap: 30px;
+    padding: 30px;
+    padding-top: 50px;
     padding-bottom: 20px;
     height: calc(100vh - 50px);
 }
+.head-register{
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: end;
+}
 .head-1 h2{
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: bold;
     text-align: center;
     margin-top: 10px;
 }
 .head-2 p{
     text-align: center;
     font-family: 'Nunito';
+    font-size: 20px;
     padding: 0px;
     margin: 0px;
     margin-top: 20px;
@@ -62,11 +71,6 @@ body{
     margin: 0;
 }
 
-/* Firefox */
-.number-input {
-    -moz-appearance: textfield;
-}
-
 .ico-input{
     position: absolute;
     right: 20px;
@@ -105,7 +109,9 @@ body{
 
 @media (min-width:720px){
     .con-register{
-        grid-template-columns: 60vw 30vw;
+        grid-template-columns: 60vw;
+        justify-content: end;
+        align-items: center;
     }
     .head-register{
         grid-column: 1/3;
@@ -125,6 +131,7 @@ body{
         justify-content: center;
     }
 }
+
 @media (min-width:1200px){
     /* .con-register{
         align-content: center;
@@ -140,11 +147,12 @@ body{
     .con-img-register{
         display: flex;
         position: absolute;
-        right: 0px;
+        transform: scaleX(-1);
+        left: 0px;
         top: 0px;
         width: 40vw;
-        height: 100vh;
-        min-height: 712px;
+        height: 100%;
+        min-height: 1012px;
     }
     .con-img-register img{
         /* display: none; */
@@ -158,4 +166,25 @@ body{
     .con-btn-register{
         padding-bottom: 0px;
     }
+}
+@media (max-width:1199px){
+    .con-register{
+        grid-template-columns: 60vw;
+        justify-content: center;
+
+    }
+    .head-register{
+        justify-content: center;
+        grid-template-columns: 100%;
+    }
+    .head-1 h2 {
+        font-size: 30px;
+      }
+      .head-2 p {
+        font-size: 16px;
+      }
+      .form-register {
+        width: 100%;
+      }
+   
 }
