@@ -19,9 +19,13 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
     <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/validateName.js"></script>
 </head>
 <body>
     <div class="con-register">
+        <div class="con-img-register">
+            <img src="./assets/img/Img-register.png" alt="">
+        </div>
         <div class="head-register">
             <div class="head-1">
                 <h2>Registrarse<span>.</span></h2>
@@ -41,35 +45,35 @@
                     </select>
                     <label for="floatingSelect">Tipo de documento</label>
                     <span class="ico-input ico-input-select"><img src="./assets/img/icons/desplegable.svg" alt=""></span>
-                  </div>
+                </div>
 
                   <div class="form-floating">
-                    <input type="number" class="form-control number-input" id="floatingInputValue" placeholder="Número de identidad" name="documento" required>
+                    <input type="number" class="form-control number-input" id="floatingInputValue" placeholder="Número de identidad" name="documento" maxlength="10" required>
                     <label for="floatingInputValue">Número de identidad</label>
                     <span class="ico-input"><img src="./assets/img/icons/id-insignia 1.svg" alt=""></span>
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Primer nombre" name="pr_name" required>
-                    <label for="floatingInputValue">Primer nombre</label>
+                    <input type="text" class="form-control" placeholder="Primer nombre" id="pr_name" name="pr_name" onblur="validateName('pr_name', 'Por favor, introduzca solo letras en el campo de primer nombre')" maxlength="15" required>
+                    <label for="pr_name">Primer nombre</label>
                     <span class="ico-input"><img src="./assets/img/icons/retratoIn.svg" alt=""></span>
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Segundo nombre" name="sg_name">
-                    <label for="floatingInputValue">Segundo nombre</label>
+                    <input type="text" class="form-control" placeholder="Segundo nombre" id="sg_name" name="sg_name" onblur="validateName('sg_name', 'Por favor, introduzca solo letras en el campo de segundo nombre')" maxlength="15">
+                    <label for="sg_name">Segundo nombre</label>
                     <span class="ico-input"><img src="./assets/img/icons/retratoIn.svg" alt=""></span>
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Primer apellido" name="pr_apellido" required>
-                    <label for="floatingInputValue">Primer apellido</label>
+                    <input type="text" class="form-control" placeholder="Primer apellido" id="pr_apellido" name="pr_apellido" onblur="validateName('pr_apellido', 'Por favor, introduzca solo letras en el campo de primer apellido')" maxlength="15" required>
+                    <label for="pr_apellido">Primer apellido</label>
                     <span class="ico-input"><img src="./assets/img/icons/retratoIn.svg" alt=""></span>
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Segundo apellido" name="sg_apellido">
-                    <label for="floatingInputValue">Segundo apellido</label>
+                    <input type="text" class="form-control" placeholder="Segundo apellido" id="sg_apellido" name="sg_apellido" onblur="validateName('sg_apellido', 'Por favor, introduzca solo letras en el campo de segundo apellido')" maxlength="15">
+                    <label for="sg_apellido">Segundo apellido</label>
                     <span class="ico-input"><img src="./assets/img/icons/retratoIn.svg" alt=""></span>
                 </div>
 
@@ -80,7 +84,7 @@
                 </div>
 
                 <div class="form-floating">
-                    <input type="number" class="form-control number-input" id="floatingInputValue" placeholder="Teléfono" name="Numcel" required>
+                    <input type="number" class="form-control number-input" id="floatingInputValue" placeholder="Teléfono" name="Numcel" maxlength="10" required>
                     <label for="floatingInputValue">Telefono</label>
                     <span class="ico-input"><img src="./assets/img/icons/telefono.svg" alt=""></span>
                 </div>
@@ -98,12 +102,12 @@
                 </div>
 
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingInputValue" placeholder="Contraseña" name="claveU" required>
+                    <input type="password" class="form-control" id="floatingInputValue" placeholder="Contraseña" name="claveU" maxlength="15" required>
                     <label for="floatingInputValue">Contraseña</label>
                 </div>
 
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingInputValue" placeholder="Confirmar Contraseña">
+                    <input type="password" class="form-control" id="floatingInputValue" placeholder="Confirmar Contraseña" maxlength="15">
                     <label for="floatingInputValue">Confirmar Contraseña</label>
                 </div>
 
@@ -111,9 +115,6 @@
                     <input id="btn-register" type="submit" value="Registrarse"></input>
                 </div>
             </form>
-        </div>
-        <div class="con-img-register">
-            <img src="./assets/img/Img-register.png" alt="">
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
