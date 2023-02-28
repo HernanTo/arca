@@ -7,6 +7,6 @@
             echo "Haz actualizado los datos correctamente uwu";
         }
     }
-    $crud = new usuario();
+    $crud = new user();
     $crud->editarDatos($_POST["tdd"] , $_POST["docUser"] , $_POST["estado"] , $_POST["primerNombre"] , $_POST["segundoNombre"] , $_POST["primerApellido"] , $_POST["segundoApellido"] , $_POST["fechaNaci"] ,  $_POST["direccionU"] ,  $_POST["correoE"] ,  $_POST["celularU"]);
 ?>
