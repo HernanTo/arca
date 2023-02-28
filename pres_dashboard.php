@@ -4,65 +4,6 @@
     $titlePage = "Bienvenido a Arca";
     $descPage = "Hola ". $nameUs . ", comienza a explorar.";
 ?>
-<!-- <a href="neg_dat_pres_U_index.php">Ver todos los usuarios</a>
-
-    <form action="neg_dat_pres_U_index.php" method="get">
-        <p>Selecciona el tipo de rol que deseas buscar.</p>
-        <input type="hidden" value="2" name="type">
-        <select name="rol" id="Rol" class="seleccion">
-            <option hidden>Tipo de rol</option>
-            <option value="1">Administrador</option>
-            <option value="2">Secretaria</option>
-            <option value="3">Doctor</option>
-            <option value="4">Paciente</option>
-        </select>
-        <button type="submit" class="btn">Buscar</button>
-    </form>
-
-    <form action="neg_dat_pres_U_index.php" method="get">
-        <input type="hidden" value="3" name="type">
-        <p>Ingresa los datos que deseas buscar.</p>
-        <select name="tdd" id="tdd" class="seleccion">
-            <option value="" hidden>Tipo de documento</option>
-            <option value="CC">Cédula de ciudadanía</option>
-            <option value="TI">Tarjeta de identidad</option>
-            <option value="CE">Cédula de extranjería</option>
-        </select>
-        <input name="document" id="documento" type="text" placeholder="Numero de documento"><br>
-        <button type="submit" class="btn">Buscar</button>
-    </form> -->
-<?php
-    // Section Admin
-    if(isset($_SESSION['administrador'])){
-        if($_SESSION['administrador'] == 1){
-            $a;
-            
-        }
-    }
-    // Section Secretaria
-
-    if(isset($_SESSION['secretaria'])){
-        if($_SESSION['secretaria'] == 1){
-            $a;
-        }
-    }
-    // Section Doctor
-    
-    if(isset($_SESSION['doctor'])){
-        if($_SESSION['doctor'] == 1){
-            $a;
-            
-        }
-    }
-    // Section Paciente
-    
-    if(isset($_SESSION['paciente'])){
-        if($_SESSION['paciente'] == 1){
-            $a;
-        }
-    }
-?>
-<!-- <a href="./salir.php">Cerrar Sesión</a> -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -223,7 +164,7 @@
                         <div class="head-form">Horarios</div>
                         <div class="body-form">Programa la disponibilidad de los doctores.</div>
                         <div class="foo-form">
-                            <button><a href="pres_gestionHorarios.php"  style="color: inherit; text-decoration: none;">Agendar</a></button>
+                            <button><a href="pres_neg_cita_create.php"  style="color: inherit; text-decoration: none;">Agendar</a></button>
                         </div>
                     </div>
                     <div class="con-form-users">

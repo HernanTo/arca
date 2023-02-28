@@ -21,7 +21,7 @@
         if(isset($_SESSION['administrador'])){
         if ($_SESSION['administrador'] == 1) {
             ?>
-            <a class="item-sidebar" href="pres_gestionHorarios.php">
+            <a class="item-sidebar" href="./pres_neg_cita_create.php">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/ico_stethoscope.svg" alt="">
