@@ -12,7 +12,7 @@
 
             mysqli_query($db,"INSERT INTO usuario_has_roles (usuario_tdoc, usuario_id, usuario_rol) VALUES ('$tdd' , '$docuUser' , '$usuario_rol')");
             if($typeRegister == 1){
-                print "<script>alert('Usuario registrado'); window.location='pres_login.html';</script>";
+                print "<script>alert('Usuario registrado'); window.location='pres_login.php';</script>";
                 // Agregar modal en el login
             }else{
                 print "<script>alert('Usuario registrado'); window.location='pres_gestionUs.php';</script>";
@@ -21,7 +21,7 @@
         
         }
     }
-    $crud = new usuario();
+    $crud = new user();
     $crud->crearUser(
         isset($_POST['usuarioRol'])? $_POST['usuarioRol'] :  $_POST['usuarioRol'] = '4',
         $_POST["fk_pk_tipo_documentoU"], 
@@ -39,4 +39,6 @@
         $_POST['type_register']
     );
 ?>
+
+
 

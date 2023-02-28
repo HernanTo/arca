@@ -21,7 +21,7 @@
         if(isset($_SESSION['administrador'])){
         if ($_SESSION['administrador'] == 1) {
             ?>
-            <a class="item-sidebar" href="">
+            <a class="item-sidebar" href="pres_gestionHorarios.php">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/ico_stethoscope.svg" alt="">
@@ -135,11 +135,11 @@
             </div>
             <h3>Centro de ayuda</h3>
             <p>Tienes problemas con Arca. Resuelve tus dudas aqui.</p>
-            <a href="./pres_help_center.html">Ir a centro de ayuda</a>
+            <a href="#">Ir a centro de ayuda</a>
         </div>
 
         <!-- btn cuando el menu no esta desplegado -->
-        <a class="item-help" href="./pres_help_center.html">
+        <a class="item-help" href="">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/help.svg" alt="">

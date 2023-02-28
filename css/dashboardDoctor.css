@@ -97,7 +97,7 @@
 }
 .con-info-cm{
     display: grid;
-    grid-template-columns: repeat(3, 310px);
+    grid-template-columns: repeat(3, 27%);
     column-gap: 70px;
 }
 .info-cm{
@@ -259,6 +259,11 @@
         row-gap: 10px;
     }
   }
+
+  
+  
+  
+  
 
   
   
