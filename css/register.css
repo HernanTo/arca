@@ -1,0 +1,190 @@
+body{
+    background: #FBFCFC;
+}
+.con-img-register{
+    display: none;
+}
+.con-register{
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 20% 75%;
+    justify-content: center;
+    row-gap: 30px;
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: calc(100vh - 50px);
+}
+.head-register{
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: end;
+}
+.head-1 h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.head-2 p{
+    text-align: center;
+    font-family: 'Nunito';
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 20px;
+}
+.head-2 p a{
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+.form-floating{
+    position: relative;
+}
+
+.form-floating select, .form-floating input{
+    font-family: 'Poppins';
+    font-weight: 590;
+    font-family: 'Poppins';
+    font-weight: 600;
+
+    background: rgb(244 246 247/0.7);
+    border: none;
+    box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.05);
+    border-radius: 15px;
+}
+.form-floating select option, .form-floating label, .form-floating input::placeholder{
+    font-family: 'Nunito';
+}
+
+.date-input::-webkit-calendar-picker-indicator{
+    background: none;
+}
+:-webkit-input{
+    background: none;
+}
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ico-input{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    top: 0px;
+}
+.ico-input-select img{
+    width: 30px;
+}
+.ico-input img{
+    height: 30px;
+}
+.form-register{
+    display: grid;
+    row-gap: 20px;
+}
+.con-btn-register{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+.con-btn-register input{
+    background: var(--main-color);
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Nunito';
+    border: none;
+    border-style: none;
+    margin-top: 20px;
+}
+
+@media (min-width:720px){
+    .con-register{
+        grid-template-columns: 60vw;
+        justify-content: end;
+        align-items: center;
+    }
+    .head-register{
+        grid-column: 1/3;
+    }
+    .form-register{
+        display: grid;
+        grid-template-columns: repeat(2, 55%);
+        justify-content: center;
+        column-gap: 10px;
+    }
+    .con-btn-register{
+        grid-column: 1/3;
+    }
+    .body-register{
+        grid-column: 1/3;
+        display: grid;
+        justify-content: center;
+    }
+}
+
+@media (min-width:1200px){
+    /* .con-register{
+        align-content: center;
+    } */
+    .body-register{
+        grid-column: 1/2;
+        height: 558px;
+    }
+    .form-register{
+        width: 750px;
+        margin-top: 20px;
+    }
+    .con-img-register{
+        display: flex;
+        position: absolute;
+        transform: scaleX(-1);
+        left: 0px;
+        top: 0px;
+        width: 40vw;
+        height: 100%;
+        min-height: 1012px;
+    }
+    .con-img-register img{
+        /* display: none; */
+        height: 100%;
+        /* width: 380px; */
+        width: 63%;
+        margin-left: auto;
+        margin-right: 0px;
+        object-fit: cover;
+    }
+    .con-btn-register{
+        padding-bottom: 0px;
+    }
+}
+@media (max-width:1199px){
+    .con-register{
+        grid-template-columns: 60vw;
+        justify-content: center;
+
+    }
+    .head-register{
+        justify-content: center;
+        grid-template-columns: 100%;
+    }
+    .head-1 h2 {
+        font-size: 30px;
+      }
+      .head-2 p {
+        font-size: 16px;
+      }
+      .form-register {
+        width: 100%;
+      }
+   
+}

@@ -1,0 +1,139 @@
+body{
+    background: #FBFCFC;
+}
+.con-img-pass img{
+    height: 100vh;
+}
+.con-recovery-password{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    justify-content: center;
+    row-gap: 30px;
+    height: calc(100vh - 50px);
+}
+.head-recovery{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 20% 10% 10% 10%;
+    row-gap: 50px;
+    padding: 40px;
+    padding-right: 180px;
+    align-content: center;
+    justify-content: end;
+    justify-self: end;
+}
+.con-form-recoverypass{
+    display: grid;
+    grid-template-columns: 70%;
+    justify-content: end;
+
+}
+.head-1 h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    text-align: end;
+}
+.head-1 span{
+    color: var(--main-color);
+}
+
+.head-2 h3{
+    text-align: end;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-size: 32px;
+    color: #17202A;
+}
+.head-2 h3{
+    text-decoration: none;
+    font-weight: 600;
+}
+.form-floating{
+    position: relative;
+}
+
+.form-floating select, .form-floating input{
+    font-family: 'Poppins';
+    font-weight: 590;
+    font-family: 'Poppins';
+    font-weight: 600;
+
+    background: rgb(244 246 247/0.7);
+    border: none;
+    box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.05);
+    border-radius: 15px;
+}
+.form-floating select option, .form-floating label, .form-floating input::placeholder{
+    font-family: 'Nunito';
+}
+
+.date-input::-webkit-calendar-picker-indicator{
+    background: none;
+}
+:-webkit-input{
+    background: none;
+}
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.con-buttons{
+    display: grid;
+    grid-template-rows: 0%;
+    grid-template-columns: 50% 50% !important;
+}
+.ico-input{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    top: 0px;
+}
+.ico-input-select img{
+    width: 30px;
+}
+.ico-input img{
+    height: 30px;
+}
+.form-recovery{
+    display: grid;
+    row-gap: 20px;
+}
+.con-btn-recovery,.con-btn-back{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
+.con-btn-recovery input{
+    background: var(--main-color);
+    width: 205px;
+    height: 74px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 25px;
+    border: none;
+    border-style: none;
+    margin-top: 20px;
+}
+.con-btn-back input{
+    background: #F4F6F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    width: 205px;
+    height: 74px;
+    color: rgba(23, 32, 42, 0.5);
+    font-family: 'Poppins';
+    font-size: 25px;
+    border: none;
+    border-style: none;
+    margin-top: 20px;
+}

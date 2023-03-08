@@ -1,0 +1,172 @@
+.con-ges-users{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-auto-rows: 40px;
+    /* grid-auto-rows: 50px; */
+    justify-content: center;
+    row-gap: 25px;
+}
+.con-all-users a{
+    color: rgb(23 32 42/0.6);
+    text-decoration: none;
+    font-family: 'Nunito';
+}
+.con-all-users a img{
+    margin-left: 20px;
+    height: 30px;
+}
+
+.icon-form{
+    grid-column: 2/3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.icon-form img{
+    height: 25px;
+}
+
+.con-form{
+    grid-column: 1/2;
+    background: #FBFCFC;
+    border-radius: 20px;
+
+}
+.con-form:nth-child(2){
+    grid-row: 2/6;
+}
+.con-form:nth-child(3){
+    grid-row: 6/10;
+}
+.con-form-new{
+    border-radius: 20px;
+}
+
+form{
+    background: #FBFCFC;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(4, 57px);
+    grid-template-columns: 70% 10%;
+}
+.head-form{
+    grid-template-columns: 90% 10%;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: grid;
+    align-content: center;
+}
+.body-form{
+    grid-row: 2/4;
+    grid-column: 1/3;
+    display: grid;
+    align-content: center;
+    row-gap: 20px;
+}
+.body-form-users{
+    row-gap: 10px;
+}
+
+.body-form #label-form{
+    font-size: 15px;
+    font-family: 'Nunito';
+}
+.body-form .form-floating input{
+    height: 50px;
+}
+.body-form .form-floating select{
+    height: 50px;
+
+}
+
+.head-form h3{
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0px;
+    margin: 0px;
+}
+.foo-form{
+    grid-row: 4/5;
+    grid-column: 1/3;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.foo-form button{
+    width: 140px;
+    border-radius: 40px;
+    height: 40px;
+    border: none;
+    background: var(--main-color);
+    color: white;
+    font-family: 'Poppins';
+}
+.form-floating input{
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 600;
+
+    background: rgb(244 246 247/0.7);
+    border: none;
+    box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.05);
+}
+.form-floating label{
+    font-size: 14px;
+    font-family: 'Nunito';
+}
+.form-floating .form-select{
+    padding-top: 0.7rem;
+    padding-bottom: 0px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+
+    background: #F4F6F7;
+    border: none;
+    box-shadow: -1px 1px 1px 1px rgb(0 0 0/0.05);
+
+}
+.form-floating label{
+    padding: .6rem .75rem;
+}
+.con-form-new{
+    grid-row: 10/21;
+    margin-bottom: 60px;
+}
+
+.con-form-new .body-form{
+    row-gap: 5px;
+}
+
+.con-form-new form{
+    grid-template-rows: 57px 258px 258px 57px;
+
+}
+.con-form-new form .form-select{
+    height: 40px;
+}
+.con-form-new form .form-floating input{
+    height: 40px;
+}
+.con-form-new form .body-form{
+    align-content: flex-start;
+}
+
+input:focus{
+    box-shadow: none;
+    outline: 0;
+}
+
+@media (min-width: 1200px){
+    .con-ges-users{
+        grid-template-columns: repeat(2, 400px);
+        /* justify-content: space-between; */
+        column-gap: 100px;
+    }
+    .con-form-new{
+        grid-row: 1/11;
+    }
+
+}

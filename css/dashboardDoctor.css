@@ -1,0 +1,266 @@
+.con-dashboard-doctor{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 280px 405px;
+    gap: 80px;
+}
+.con-horarios{
+    display: grid;
+    grid-template-columns: 480px 40%;
+    column-gap: 160px;
+}
+.con-form-horarios, .con-form-diagnosticos{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    align-items: center;
+    border-radius: 10px;
+    row-gap: 11px;
+    padding: 40px;
+
+}
+.con-form-horarios{
+    display: grid;
+    grid-template-rows: 45px 60px 70px;
+    background-image: url("../assets/img/doctor.svg");
+    background-color: rgb(50,50,50);
+    background-blend-mode: soft-light;
+}
+.head-form{
+    text-align:left;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 27px;
+    font-weight: bold;
+}
+.body-form{
+    font-family: 'Poppins';
+    font-size: 18px;
+    text-align:left;
+    color: white
+}
+.foo-form{
+    gap: 20px;
+}
+.foo-form button{
+    width: 200px;
+    height: 70px;
+    font-family: 'Poppins';
+    font-size: 21px;
+    font-weight: bold;
+    background-color: black;
+    color: #fff;
+    border-radius: 10px;
+    border-style: none;
+    opacity: 70%;
+}
+.con-form-diagnosticos{
+    display: grid;
+    position: relative;
+    grid-template-columns: 95% 5%;
+    grid-template-rows:  68px 70px 40px;
+    background-color: rgba(72, 61, 139, 0.5);
+    column-gap: 50px;
+}
+.con-form-diagnosticos > .head-form, .body-form{
+    grid-column: 1/1;
+}
+.flecha-diagnosticos{
+    grid-column: 1/1;
+    font-family: 'Poppins';
+    gap: 20px;
+    text-decoration: none;
+    color: white;
+}
+.info-diagnosticos{
+    display: grid;
+    grid-column: 2/2;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    top: 180px;
+    right: -10px;
+}
+.info-diagnosticos img{
+    height: 150px;
+    width: 150px;
+}
+.con-cm{
+    display: grid;
+    grid-template-rows: 23px 350px;
+    row-gap: 30px;
+}
+.title-cm{
+    color: var(--main-color);
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 22px;
+}
+.con-info-cm{
+    display: grid;
+    grid-template-columns: repeat(3, 27%);
+    column-gap: 70px;
+}
+.info-cm{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins';
+    grid-template-columns: 100%;
+    grid-template-rows: 70px 50px 150px 80px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.head-info-cm{
+    font-size: 21px;
+    font-weight: bold;
+}
+.body-info-cm{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 40px;
+}
+.time-info-cm{
+    display: grid;
+    align-content: center;
+    color: var(--main-color);
+    font-weight: bold;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    background-color: #d9d7e7;
+}
+.date-info-cm{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 30px 50px;
+    height: 100px;
+}
+.title-date-info, .text-date-info{
+    display: grid;
+    grid-template-columns: 90px 90px 105px;
+}
+.title-date, .text-date{
+    border-right: solid 1px;
+    padding: 4px 15px;
+}
+.title-date:last-child, .text-date:last-child{
+    border-right: 0px;
+}
+.title-date-info{
+    font-size: 28px;
+    font-weight: bold;
+}
+.text-date-info{
+    font-size: 18;
+    font-family: 'Nunito';
+}
+
+.footer-info-cm{
+    display: grid;
+    background-color: var(--main-color);
+    text-decoration: none;
+    align-content: center;
+    font-weight: bold;
+    border-radius: 0px 0px 10px 10px;
+    height: 80px;
+    opacity: 80%;
+    height: 80px;
+    font-size: 18px;
+    color: #fff;
+}
+.body-scm{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    grid-template-rows: 300px 30px;
+}
+.img-scm{
+    display: grid;
+    justify-content: center;
+}
+.img-scm > img{
+    width: 300px;
+}
+.text-scm{
+    text-align: center;
+    font-size: 23px;
+    font-weight: lighter;
+}
+
+@media only screen and (max-width: 980px) {
+    .con-dashboard-doctor {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      gap: 30px;
+      padding: 15px;
+    }
+    .con-horarios {
+      grid-template-columns: 100%;
+      column-gap: 0;
+      row-gap: 20px;
+    }
+    .con-form-horarios, .con-form-diagnosticos {
+      padding: 20px;
+      row-gap: 30px;
+    }
+    .foo-form button {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+    }
+    .con-form-diagnosticos {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      column-gap: 0;
+      right: 0;
+    }
+    .info-diagnosticos {
+      top: 150px;
+      right: -20px;
+    }
+    .info-diagnosticos img {
+      height: 100px;
+      width: 100px;
+    }
+    .con-cm {
+      grid-template-rows: auto;
+      row-gap: 15px;
+    }
+    .title-cm {
+      font-size: 18px;
+      text-align: center;
+    }
+    .con-info-cm {
+      grid-template-columns: 70%;
+      justify-content: center;
+      row-gap: 30px;
+    }
+    .info-cm {
+      grid-template-rows: 50px 40px 150px 80px;
+    }
+    .time-info-cm {
+      height: 30px;
+      width: 100px;
+    }
+    .date-info-cm {
+      height: 70px;
+    }
+    .title-date-info, .text-date-info {
+      grid-template-columns: 50px 50px 75px;
+    }
+    .title-date, .text-date{
+        border-right: solid 1px;
+        padding: 4px 8px;
+    }
+    .title-date:last-child, .text-date:last-child{
+        row-gap: 10px;
+    }
+  }
+
+  
+  
+  
+  

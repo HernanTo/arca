@@ -1,0 +1,72 @@
+.con-update-profile{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90%;
+}
+.body-update-profile{
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 700px;
+    justify-content: center;
+    align-content: center;
+}
+.con-form-profile{
+    display: grid;
+    grid-template-rows: 50px 512px 58px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 1.5px 2px #ddd;
+    padding: 40px;
+}
+.head-form-profile{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-color);
+}
+.body-form-profile{
+    display: grid;
+    grid-template-rows: repeat(6, 85px);
+    justify-content: center;
+}
+.form-input-profile{
+    display: grid;
+    grid-template-rows: 20px 32px;
+    grid-template-columns: 300px;
+    gap: 10px;
+}
+.form-input-profile > label{
+    font-size: 16px;
+    font-weight: 500;
+}
+.form-input-profile > input{
+    padding: 0px 10px;
+}
+.dates-input{
+    background-color: rgb(244 246 247/0.7);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1.5px 2px #ddd;
+}
+.dates-input-view{
+    cursor: default;
+}
+.footer-form-profile{
+    display: grid;
+    grid-template-columns: 120px;
+    grid-template-rows: 40px;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+}
+.footer-form-profile > input{
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+}
+.footer-form-profile > input:hover{
+    background-color: rgb(50 40 108 / 0.4);
+}

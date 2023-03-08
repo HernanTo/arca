@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PQRSF | Arca</title>
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pqrs.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="con-form-pqrs">
+        <form action="./neg_dat_pqrsf_store.php" enctype="multipart/form-data" method="post">
+        <section class="head-form">
+            <h2>Bienvenido al modulo de PQRSF</h2>
+            <p>Este formulario esta destinado a presentar peticiones de cada usuario, responda los campos necesarios para hacer un mejor seguimiento de su petición.</p>
+        </section>
+        <section class="form-ba">
+            <div class="head-form">
+                <h4>Información del afectado</h4>
+                <hr>
+            </div>
+            <div class="body-form-ba">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="fk_pk_tipo_documentoU" required>
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    </select>
+                    <label for="floatingSelect">Tipo de documento</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" class="form-control number-input" id="floatingInput" placeholder="Número de documento"   name="docuemnt" required>
+                    <label for="floatingInput">Número de documento</label>
+                </div>
+                
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Primer nombre" name="pr_name" required>
+                    <label for="floatingInputValue">Primer nombre</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Segundo nombre" name="sg_name">
+                    <label for="floatingInputValue">Segundo nombre</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Primer apellido" name="pr_apellido" required>
+                    <label for="floatingInputValue">Primer apellido</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Segundo apellido" name="sg_apellido">
+                    <label for="floatingInputValue">Segundo apellido</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" class="form-control number-input" id="floatingInput" placeholder="Celular"  name="phonenum" required>
+                    <label for="floatingInput">Celular</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="number" class="form-control number-input" id="floatingInput" placeholder="Telefono Fijo"  name="telnum">
+                    <label for="floatingInput">Teléfono fijo</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="Correo electronico" name="correo" required>
+                    <label for="floatingInputValue">Email</label>
+                </div>
+            </div>
+        </section>
+        <section class="detail-so">
+            <div class="head-form">
+                <h4>Detalle de la solicitud</h4>
+                <hr>
+            </div>
+            <div class="body-form-detail">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="fk_pk_tipo_pqrsf" required>
+                    <option value="1">Queja</option>
+                    <option value="2">Felicitaciones</option>
+                    <option value="3">Peticiones</option>
+                    <option value="4">Reclamos</option>
+                    <option value="5">Sugerencias</option>
+                    </select>
+                    <label for="floatingSelect">Tipo de solicitud</label>
+                </div>
+                <div class="form-floating">
+                    <input type="date" class="form-control date-input" id="floatingInputValue" placeholder="Fecha de radicacion" name="fecha_radi" required>
+                    <label for="floatingInputValue">Fecha de radicación</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputValue" placeholder="Motivo del PQRSF" name="motivo" required>
+                    <label for="floatingInputValue">Motivo del PQRSF</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Detalle del PQRSF" name="detalle" required></textarea>
+                    <label for="floatingTextarea">Detalle del PQRSF</label>
+                  </div>
+                  <div class="con-file">
+                      <input type="file" accept=".pdf" id="file" class="btn btn-primary" name="file" onchange="fileValidation(); selectFilePqrsf()">
+
+                      <label for="file" class="label-file">
+                        <div class="btn-adj"><p>Adjuntar soporte***</p></div>
+                        <div class="icon-clip"><i class="fi fi-rr-clip"></i></div>
+                        <div class="name-file"><p id="name-file" >Seleccionar archivos</p></div>
+                        
+                      </label>
+                  </div>
+                  <div class="alert-file">
+                      <p>*No es necesario adjuntar soporte.</p>
+                      <p>**Solo adjuntar Archivos PDF.</p>
+                  </div>
+            </div>
+
+        </section>
+        <section class="foo-form">
+            <a href="index.html">Volver</a>
+            <input type="submit" value="Enviar">
+        </section>
+
+    </form>
+    </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        <div class="modal-body">
+          <div class="con-img-alert">
+              <img src="assets/img/icons/iconalertmodal.svg" alt="">
+          </div>
+          <div class="con-alert-modal"><p>Adjunte solo archivos PDF para los soportes.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="./bootstrap/jquery.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

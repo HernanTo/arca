@@ -1,0 +1,275 @@
+.con-cm-horarios{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%; 
+    align-items: center;
+}
+.flecha-cm{
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 14px;
+    gap: 20px;
+    text-decoration: none;
+    color: rgba(23, 32, 42, 0.6);
+}
+.con-new-cm {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    place-items: center;
+    background-color: transparent;
+    overflow: hidden;
+ }
+ 
+.con-cm {
+    display: grid;
+    grid-template-rows: 15% 15% 25% 15% 15% 15%;
+    width: 70%;
+    height: 656px;
+    background-color: #FBFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 60px;
+    box-sizing: border-box;
+    margin: 25px;
+}
+.title-cm{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-family: 'Poppins';
+    font-size: 25px;
+    font-weight: bold;
+    color: #17202A;
+}
+.agregar-cm{
+    display: grid;
+    justify-content: end;
+}
+.info-resp-cm{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    align-items: center;
+    position: relative;
+    color: black;
+    overflow: hidden;
+}
+.info-resp-cm input{
+    position: absolute;
+    height: 100%; 
+    width: 100%;
+    color: black;
+    outline: 0;
+    background-color: inherit;
+    padding-top: 50px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.info-resp-cm .label-cm{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background-color: inherit;
+    left: 0;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+.info-resp-cm .label-cm::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid black ;
+    left: 0;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+}
+.info-resp-cm .span-cm{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transition: all 0.2s ease;
+}
+
+.info-resp-cm input:focus + .label-cm .span-cm,
+.info-resp-cm input:valid + .label-cm .span-cm {
+    font-family: 'Nunito';
+    font-size: 14px;
+    color: black;
+    transform: translateY(-150%);
+}
+.info-resp-cm input:focus + .label-cm::after,
+.info-resp-cm input:valid + .label-cm::after {
+    transform: translateX(0%);
+}
+.info-doc{
+    display: grid;
+    grid-template-columns: 20% 50% 25%;
+    align-items: center;
+    column-gap: 20px;
+}
+.especialidad-doc{
+    display: grid;
+}
+.name-doc{
+    display: grid;
+    grid-column: 2/3;
+}
+.consultorio-doc{
+    display: grid;
+    grid-column: 3/3;
+}
+.form-floating{
+    position: relative;
+}
+
+.form-floating select, .form-floating input{
+    font-family: 'Poppins';
+    font-weight: 590;
+    font-family: 'Poppins';
+    font-weight: 600;
+
+    background: rgb(244 246 247/0.7);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.form-floating select option, .form-floating label, .form-floating input::placeholder{
+    font-family: 'Nunito';
+}
+
+.date-input::-webkit-calendar-picker-indicator{
+    background: none;
+}
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.ico-input{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    top: 0px;
+}
+.ico-input-select img{
+    width: 30px;
+}
+.ico-input img{
+    height: 30px;
+}
+.con-hora-agendamiento{
+    display: grid;
+    grid-template-columns: 50% 40%;
+    align-items: center;
+    column-gap: 20px;
+}
+.semana-agendamiento{
+    display: grid;
+}
+.horario-agendamiento{
+    display: grid;
+    grid-column: 2/2;
+}
+.con-btn-cm{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: center;
+
+}
+.con-btn-cm input{
+    background: var(--main-color);
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Nunito';
+    border: none;
+    border-style: none;
+    margin-top: 20px;
+}
+
+@media(max-width: 1500px) {
+    .con-cm {
+        display: grid;
+        grid-template-rows: 5% 15% 35% 15% 15% 15%;
+        height: 850px;
+        row-gap: 10px;
+    }
+    .title-cm{
+        font-size: 20px;
+    }
+    .agregar-cm{
+        display: grid;
+        justify-content: end;
+    }
+    .agregar-cm img{
+        height: 60%;
+        width: 60%;
+    }
+    .info-doc{
+        display: grid;
+        grid-template-columns: 0% 100% 0%;
+        grid-template-rows: 20% 50% 25%;
+        justify-content: center;
+    }
+    .especialidad-doc{
+        display: grid;
+        grid-column: 2/3; 
+    }
+    .name-doc{
+        display: grid;
+        grid-column: 2/3;
+    }
+    .consultorio-doc{
+        display: grid;
+        grid-column: 2/3;
+    }
+    .con-hora-agendamiento{
+        display: grid;
+        grid-template-columns: 0% 100% 0%;
+        grid-template-rows: 50% 40%;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .semana-agendamiento{
+        display: grid;
+        grid-column: 2/3;
+    }
+    .horario-agendamiento{
+        display: grid;
+        grid-column: 2/3;
+    }
+    .ico-input-select img{
+        width: 15px;
+    }
+    .ico-input img{
+        height: 15px;
+    }
+
+}
+@media(max-width: 1500px) {
+    .title-cm{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 70% 70%;
+        row-gap: 10px;
+        font-size: 12px;
+        place-items: center;
+    }
+    .agregar-cm{
+        display: grid;
+        grid-row: 2/2;
+        justify-content: end;
+    }
+    .agregar-cm img{
+        height: 25px;
+        width: 25px;
+    }
+}
