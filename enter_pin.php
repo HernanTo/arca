@@ -36,7 +36,7 @@ if(isset($_POST['correoElectronico_U'])) {
             <div class="con-form-pin">
                 <form action="./verify_pin.php" method="POST" class="form-pin">
                     <div class="form-floating">
-                        <input type="text" class="form-control" placeholder="PIN de recuperacion" id="pin" name="pin" required>
+                        <input type="password" class="form-control" placeholder="PIN de recuperacion" id="pin" name="pin" required>
                         <label for="pin">PIN de recuperacion</label>
                         <span class="ico-input"><img src="./assets/img/icons/retratoIn.svg" alt=""></span>
                     </div>
