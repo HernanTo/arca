@@ -1,32 +1,29 @@
 <?php
     include('./seguridad_admin.php');
-    class pqrsf{
+    class cita{
         public function index(){
             include('./data_conexion.php');
 
-            $sql = "SELECT NumeroRadicacion, CONCAT(fk_pk_tipo_documentoU, ' ',  documento_U) as document, estadoPQRSF, TipoPQRSF  FROM pqrsf 
-            INNER JOIN TipoPQRSF
-            on idTipoPQRSF = fk_pk_idTipoPQRSF";
+            $sql = "SELECT id_cita, NombreTipoCita, fecha, hora, CONCAT(documento_U, ' - ', pNombre_U, ' ', sNombre_U, ' ', pApellido_U, ' ', sApellido_U) as Doctor, estadoCita FROM citasmedicas INNER JOIN tiposdecita on id_tipo_cita = idTiposCita INNER JOIN usuario on documento_U = docDoctor";
 
             $resultado = $db->query($sql);
 
             $iterable = TRUE;
             while($row = $resultado->fetch_assoc()){
-                $id = $row['NumeroRadicacion'];
-                $typePqrsf = $row['TipoPQRSF'];
-                $document = $row['document'];
-                $estado = $row['estadoPQRSF'];
-
 ?>
                 <tr class="<?php echo $iterable ? ' ' : 'row-secondary' ?>">
-                    <td class="th-first"><?php echo $id ?></td>
-                    <td><?php echo $typePqrsf ?></td>
-                    <td><?php echo $document ?></td>
-                    <td><?php echo $estado == 1 ? 'Respondido' : 'En tramite'?></td>
-                    <td id="last-clm" class="con-actions th-end" style="grid-template-columns: 100%;">
-                        <a href="./neg_dat_pres_pqrsf_show.php?id=<?php echo $id ?>">
-                            <img src="./assets./img/icons/eye.svg" alt="">
+                    <td class="th-first"><?php echo $row['NombreTipoCita'] ?></td>
+                    <td class=""><?php echo $row['fecha'] ?></td>
+                    <td class=""><?php echo $row['hora'] ?></td>
+                    <td class=""><?php echo $row['Doctor'] ?></td>
+                    <td class=""><?php echo $row['estadoCita'] != 0 ? 'Agendada': 'No agendada' ?></td>
+                    <td class="con-actions th-end">
+                        <a href="./neg_dat_cita_update.php?id=<?php echo $row['id_cita'] ?>">
+                            <img src="./assets./img/icons/lapiz.svg" alt="">
                         </a> 
+                        <a href="./neg_dat_cita_delete.php?id=<?php echo $row['id_cita'] ?>">
+                            <img src="./assets./img/icons/trash.svg" alt="" style="height: 50px;">
+                        </a>
                     </td>
                 </tr>
 <?php
@@ -36,7 +33,7 @@
 
     }
     
-    $classPqrsf = new pqrsf;
+    $classCita = new cita;
     $nameUs = $_SESSION["pNombre_U"];
     $titlePage = "Gestion de Horarios.";
     $descPage = "Gestiona los horarios de tus doctores y citas medicas.";
@@ -100,16 +97,17 @@
                     <table id="table-co" class="display responsive nowrap">
                         <thead>
                             <tr>
-                                <th class="th-first" data-priority="2">#</th>
-                                <th>Tipo</th>
-                                <th>Documento</th>
+                                <th data-priority="2" class="th-first">Tipo</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Doctor</th>
                                 <th>Estado</th>
                                 <th data-priority="1" width="10px" class="th-end">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $classPqrsf->index();
+                                $classCita->index();
                             ?>
                         </tbody>
                     </table>

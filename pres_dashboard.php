@@ -42,7 +42,7 @@
                         <div class="head-form">Citas médicas</div>
                         <div class="body-form">Agenda tus citas médicas aquí.</div>
                         <div class="foo-form">
-                            <button type="submit">Agendar cita</button>
+                            <a href="./pres_tCita.php">Agendar cita</a>
                         </div>
                     </div>
                     <div class="con-form-pqrsf">
@@ -189,10 +189,40 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="alertH" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        <div class="modal-body">
+          <div class="con-img-alert">
+              <img src="assets/img/icons/iconalertmodalcheck.svg.svg" alt="">
+          </div>
+          <div class="con-alert-modal"><p>Cita creada con éxito</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!-- JavaScript Bundle with Popper -->
 <script src="./js/sidebar.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./bootstrap/jquery.js"></script>
+<script src="./bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+<?php
+if(isset($_SESSION['citaE'])){
+    if($_SESSION['citaE'] == 1){
+        ?>
+        <script>
+            alertSuccesfelly();
+            </script>
+        <?php
+        unset($_SESSION['citaE']);
+    }
+}
+?>
 </body>
 </html>
 

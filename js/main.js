@@ -26,8 +26,13 @@ function fileValidation(){
     var allowedExtensions = /(.PDF|.pdf)$/i;
     if(!allowedExtensions.exec(filePath)){
             $('#exampleModal').modal('show');
-
-        fileInput.value = '';
-        return false;
-}
+            
+            fileInput.value = '';
+            return false;
+        }
+    }
+function alertSuccesfelly(){
+    $( document ).ready(function() {
+        $('#alertH').modal('toggle')
+    });
 }

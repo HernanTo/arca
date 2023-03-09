@@ -6,7 +6,10 @@
             $nameUs = $_SESSION["pNombre_U"];
             $tdd = $_SESSION['tdd'];
             $docu = $_SESSION['docu'];
-            $sql = "SELECT * FROM citasmedicas WHERE tddPaciente = '$tdd' AND docPaciente = '$docu' LIMIT 0,3";
+            $sql = "SELECT id_cita, id_tipo_cita, NombreTipoCita, fecha, hora FROM citasmedicas 
+            INNER JOIN tiposdecita
+            ON tiposdecita.idTiposCita = citasmedicas.id_tipo_cita
+            WHERE tddPaciente = '$tdd' AND docPaciente = '$docu' LIMIT 0,3";
            
             $resultado = $db -> query($sql);
             $iterable = true;
@@ -17,8 +20,9 @@
                     $mostrar_contenedor = false;
                 }
                 $idCita = $row ["id_cita"];
-                $tipoCita = $row["tipo_cita"];
+                $tipoCita = $row["NombreTipoCita"];
                 $fechaCita = $row["fecha"];
+                $fechaCita = strtotime($fechaCita);
                 $horaCita = $row["hora"];
 
             ?>
@@ -26,13 +30,13 @@
                     <div class='head-info-cm'><?php echo $tipoCita ?></div>
                     <div class='body-info-cm'>
                         <input type='hidden' name='idCita' value='$idCita'>
-                        <div class='time-info-cm'>8:00 am</div>
+                        <div class='time-info-cm'><?php echo $horaCita ?></div>
                     </div>
                     <div class='date-info-cm'>
                         <div class='title-date-info'>
-                            <div class='title-date'>01</div>
-                            <div class='title-date'>01</div>
-                            <div class='title-date'>2022</div>
+                            <div class='title-date'><?php echo date("d", $fechaCita) ?></div>
+                            <div class='title-date'><?php echo date("m", $fechaCita) ?></div>
+                            <div class='title-date'><?php echo date("Y", $fechaCita) ?></div>
                         </div>
                         <div class='text-date-info'>
                             <div class='text-date'>Día</div>

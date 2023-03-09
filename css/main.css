@@ -78,3 +78,40 @@ body{
         left: -6000px !important;
     }
 }
+
+/* Modal*/
+.modal-header{
+    border: 0px;
+}
+.con-img-alert{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.con-img-alert img{
+    margin-top: -20px;
+}
+.modal-content{
+    background: #FBFCFC;
+    border-radius: 10px;
+}
+.con-alert-modal{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Poppins';
+    /* margin-bottom: 20px; */
+}
+.con-alert-modal p{
+    padding: 0px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 550;
+}
+.fade{
+    background: rgba(23, 32, 42, 0.25); 
+}
+.btn-close{
+    background: transparent url(../assets/img/icons/cross-circle.svg) center/1.5em auto no-repeat;
+    cursor: pointer !important;
+}

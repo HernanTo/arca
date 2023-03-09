@@ -118,7 +118,7 @@ hr{
         column-gap: 20px;
     }
     .body-hr{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         row-gap: 20px;
         column-gap: 20px;
     }
@@ -128,3 +128,4 @@ hr{
     justify-content: center;
     margin-top: 40px;
 }
+

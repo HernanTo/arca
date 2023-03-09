@@ -220,6 +220,7 @@
                                                         <option value="0" <?php echo $data['specialty'] == 'Ninguna' ? 'selected' : ' ' ?>>Ninguna</option>
                                                         <option value="1" <?php echo $data['specialty'] == 'Médico General' ? 'selected' : ' ' ?>>Médico General</option>
                                                         <option value="2" <?php echo $data['specialty'] == 'Psicologo' ? 'selected' : ' ' ?>>Psicologo</option>
+                                                        <option value="5" <?php echo $data['specialty'] == 'Fisioterapeuta' ? 'selected' : ' ' ?>>Fisioterapeuta</option>
                                                         <option value="4" <?php echo $data['specialty'] == 'Root' ? 'selected' : ' ' ?>>Root</option>
                                                     </select>
                                                     <label for="floatingSelect">Especialidad</label>
