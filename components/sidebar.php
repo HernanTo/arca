@@ -75,7 +75,7 @@
             </div>
             <div class="name-item">Citas médicas</div>
         </a>
-        <a class="item-sidebar" href="">
+        <a class="item-sidebar" href="pres_dat_Diagnoses.php">
             <div class="color-item"></div>
             <div class="con-ico-item">
                 <img src="./assets/img/icons/diagnostico.svg" alt="">
