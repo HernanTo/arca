@@ -1,0 +1,101 @@
+.con-info-diagnoses {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  place-items: center;
+}
+.con-complete-diagnoses {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 15% 50%;
+  padding: 50px;
+  height: 90%;
+  width: 90%;
+  background-color: #fbfcfc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  color: #000000;
+}
+h2 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  color: #17202a;
+}
+hr.border {
+  border-color: black !important;
+}
+.content-text-diagnoses {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90% 10%;
+    row-gap: 70px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    color: rgba(23, 32, 42, 0.8);
+  }
+  
+.text-diagnoses textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    background-color: #F4F6F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 1.5;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(23, 32, 42, 0.8);
+    overflow-y: auto; /* Agrega barra de desplazamiento vertical cuando se llena el contenido */
+}
+  
+.text-diagnoses textarea:focus::placeholder {
+    color: transparent; /* oculta el placeholder cuando el textarea está en foco */
+}
+  
+.text-diagnoses textarea::placeholder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(23, 32, 42, 0.5);
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+.con-btn-create{
+    display: grid;
+    grid-row: 2 / 2 ;
+    place-items: center;
+  }
+.btn-create{
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: bold;
+    color: #F4F6F7;
+    cursor: pointer;
+    padding: 10px;
+    width: 260px;
+    height: 75px;
+    background: #483D8B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border-style: none;
+}
