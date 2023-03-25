@@ -1,0 +1,92 @@
+.con-info-diagnoses{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+}
+.back-diagnoses{
+    display: flex;
+    place-items: center;
+    column-gap: 10px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    color: rgba(23, 32, 42, 0.6);
+    font-size: 20px;
+}
+.back-diagnoses img{
+    transform: scaleX(-1);
+}
+.con-complete-diagnoses{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 15% 40% 40%;
+    padding: 50px;
+    height: 90%;
+    width: 100%;
+    background-color: #FBFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: #000000;
+}
+.con-date{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: auto;
+}
+.date-diagnoses{
+    display: grid;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    background-color: #d9d7e7;
+    place-items: center;
+}
+h2{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;       
+    color: #17202A;
+}
+hr.border{
+    border-color: black !important;
+}
+.content-text-diagnoses{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 20%;
+    row-gap: 10px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    color: rgba(23, 32, 42, 0.8);
+}
+.body-scm{
+    display: grid;
+    position: relative;
+    place-items: center;
+    grid-template-rows: 300px 30px;
+}
+.img-scm{
+    display: grid;
+    justify-content: center;
+}
+.img-scm > img{
+    width: 300px;
+}
+.text-scm{
+    text-align: center;
+    font-size: 23px;
+    font-weight: lighter;
+}

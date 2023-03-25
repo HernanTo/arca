@@ -1,0 +1,103 @@
+.con-diagnoses{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+}
+.con-search-diagnoses input{
+    display: grid;
+    grid-template-columns: 70% 20%;
+}
+.btn-search-diagnoses{
+    width: 343px;
+    height: 63px;
+    background: #FBFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border-style: none;
+    background-image: url('../assets/img/icons/busqueda3.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 300px;
+    padding-left: 20px;
+}
+.con-form-diagnoses{
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(4, 20%);
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.con-info-diagnoses{
+    display: grid;
+    grid-template-columns: 10% 40% 20% 30%;
+    background: #FBFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 10px;
+}
+.img-diagnoses{
+    display: grid;
+    place-items: center;
+}
+.title-diagnoses{
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 24px;
+}
+.title-info-doctor{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgba(23, 32, 42, 0.8);
+}
+.con-date{
+    display: grid;
+    place-items: center;
+}
+.date-diagnoses{
+    display: grid;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 40px;
+    width: 150px;
+    background-color: #d9d7e7;
+    place-items: center;
+}
+.con-button-view-more{
+    display: grid;
+    justify-content: center;
+}
+.con-button-view-more input{
+    background: #483D8B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 200px;
+    height: 55px;
+    color: #FBFCFC;
+    font-family: 'Poppins';
+    font-size: 24px;
+    border: none;
+    border-style: none;
+    margin-top: 20px;
+}
+.body-scm{
+    display: grid;
+    position: relative;
+    place-items: center;
+    grid-template-rows: 300px 30px;
+}
+.img-scm{
+    display: grid;
+    justify-content: center;
+}
+.img-scm > img{
+    width: 300px;
+}
+.text-scm{
+    text-align: center;
+    font-size: 23px;
+    font-weight: lighter;
+}
