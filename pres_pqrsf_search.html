@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PQRSF | Arca</title>
+    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/searchpqrsf.css">
+    <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="con-search-pqrsf">
+        <section class="con-head-form">
+            <div class="head-form">
+                <h2>Módulo de PQRSF</h2>
+                <a class="arca" href="index.html">
+                    <img src="./assets/img/icons/logo.svg" alt="" id="arca-logo">
+                </a>
+            </div>
+            <div class="head-text">
+                <p>Con el número de radicado que ha sido generado al momento de enviar tu solicitud, puedes consultar el estado y la información de tu PQRSF.</p>
+                <a href="index.html">Regresar al inicio</a>
+            </div>
+        </section>
+        <section class="con-body-form">
+            <div class="title-form">
+                <h4>PQRSF</h4>
+                <hr>
+            </div>
+            <div class="body-form">
+                <button class="btn-pqrsf">
+                    <a href="pres_pqrsf.html">Redactar PQRSF</a>
+                    <div class="ico-input">
+                        <img src="./assets/img/icons/write1.svg" alt="Presentar una PQRSF">
+                    </div>
+                </button>
+                <form action="pres_neg_dat_pqrsf_search.php" method="get">
+                    <div class="form-floating">
+                        <input type="number" class="form-control number-input" id="floatingInput" placeholder="Número de radicado"   name="num_radicado" required>
+                        <label for="floatingInput">Número de radicado</label>
+                        <button class="ico-input btn-input">
+                            <img src="./assets/img/icons/busqueda.svg" alt="Consultar número de radicado">
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="con-types-form">
+            <div class="title-form">
+                <h4>Tipos de PQRSF</h4>
+                <hr>
+            </div>
+            <div class="types-pqrsf">
+                <div class="con-text-pqrsf">
+                    <span class="ico-pqrsf"><img src="./assets/img/icons/pqrsf_p.svg" alt=""></span>
+                    <div class="text-pqrsf">
+                        <h4>Petición</h4>
+                        <p>Manifestación de una solicitud ante la conformidad o no de los servicios ofrecidos o la petición de una orientación de un servicio en específico.</p>
+                    </div>
+                </div>
+                <div class="con-text-pqrsf">
+                    <span class="ico-pqrsf"><img src="./assets/img/icons/pqrsf_r.svg" alt=""></span>
+                    <div class="text-pqrsf">
+                        <h4>Queja</h4>
+                        <p>Muestra de insatisfacción con relación a los servicios o procesos ofrecidos.</p>
+                    </div>
+                </div>
+                <div class="con-text-pqrsf">
+                    <span class="ico-pqrsf"><img src="./assets/img/icons/pqrsf_q.svg" alt=""></span>
+                    <div class="text-pqrsf">
+                        <h4>Reclamo</h4>
+                        <p>Expresión de inconformidad sobre un servicio en específico concedido.</p>
+                    </div>
+                </div>
+                <div class="con-text-pqrsf">
+                    <span class="ico-pqrsf"><img src="./assets/img/icons/pqrsf_s.svg" alt=""></span>
+                    <div class="text-pqrsf">
+                        <h4>Sugerencias</h4>
+                        <p>Manifestación de recomendaciones para mejorar servicios o procesos ofrecidos.</p>
+                    </div>
+                </div>
+                <div class="con-text-pqrsf">
+                    <span class="ico-pqrsf"><img src="./assets/img/icons/pqrsf_f.svg" alt=""></span>
+                    <div class="text-pqrsf">
+                        <h4>Felicitaciones</h4>
+                        <p>Expresión de satisfacción sobre el servicio brindado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
