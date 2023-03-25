@@ -1,4 +1,7 @@
 <?php
+    if(!isset($_POST['num_radicado'])){
+        header('Location: pres_pqrsf_search.html');
+    }
     class pqrsf{
         public function search($numRadicado){
             include ('./data_conexion.php');
@@ -6,6 +9,8 @@
             $sql = "SELECT * FROM pqrsf INNER JOIN TipoPQRSF on idTipoPQRSF = fk_pk_idTipoPQRSF WHERE NumeroRadicacion = '$numRadicado'";
 
             $resultado = $db -> query($sql);
+            if($resultado->num_rows > 0){
+
 
             while($row = $resultado->fetch_assoc()){
                 
@@ -28,6 +33,11 @@
                     "support" => $row['soportePQRSF'],
                 ];
             }
+        }else{
+        header('Location: pres_pqrsf_search.html');
+
+        }
+
             return $data;
         }
     }
