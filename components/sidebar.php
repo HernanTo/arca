@@ -153,8 +153,4 @@
     <img src="./assets/img/icons/angle-double-small-left-free-icon-font.svg" alt="" class="img-btn">
 </div>
 <div class="con-sidebar-a" onclick=" menu()">
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> 73de413e4c355d84403340cf6517c5e6be54ab2e
