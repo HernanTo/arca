@@ -13,7 +13,7 @@ if(!isset($_GET['cita'])){
             mysqli_query($db, $sql);
             if($db -> affected_rows> 0){
                 $_SESSION['citaE'] = 1;
-                // header('Location: pres_dashboard.php');
+                header('Location: pres_dashboard.php');
 
             }else{
                 $_SESSION['citaE'] = 0;

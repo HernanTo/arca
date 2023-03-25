@@ -3,35 +3,32 @@ include ('seguridad.php');
     if(!$_SESSION['paciente'] == 1){
         header('Location: pres_dashboard.php');
     }
-    if(!isset($_GET['cita'])){
-        header('Location: pres_tCita.php');
-    }
+    // if(!isset($_GET['cita'])){
+    //     header('Location: pres_tCita.php');
+    // }
     class cita {
-        public function show($tipoCita, $fechaHoy, $hora){
+        public function showCita($idCita, $tipoCita){
             include('./data_conexion.php');
-            $sql = "SELECT id_cita, id_tipo_cita, NombreTipoCita, fecha, hora, CONCAT('Doc. ', pNombre_U, ' ', sNombre_U, ' ', pApellido_U, ' ', sApellido_U)  as Doctor, photo  FROM citasmedicas
-            INNER JOIN usuario
-            ON documento_U = docDoctor
-            INNER JOIN tiposdecita
-            ON tiposdecita.idTiposCita = citasmedicas.id_tipo_cita
-            WHERE ((fecha = '$fechaHoy' AND hora >= '$hora') OR (fecha > '$fechaHoy')) AND id_tipo_cita = $tipoCita AND estadoCita = 0 ORDER BY citasmedicas.fecha ASC, citasmedicas.hora ASC";
+            $sql = "SELECT id_cita, id_tipo_cita, NombreTipoCita, fecha, hora, CONCAT('Doc. ', pNombre_U, ' ', sNombre_U, ' ', pApellido_U, ' ', sApellido_U) as Doctor, estadoCita FROM citasmedicas INNER JOIN usuario ON documento_U = docDoctor INNER JOIN tiposdecita ON tiposdecita.idTiposCita = citasmedicas.id_tipo_cita WHERE id_cita = $idCita AND estadoCita = 0";
             $resultado = $db->query($sql);
-            while($row = $resultado-> fetch_assoc()){
-                ?>
-                    <div class="cita">
-                        <div class="con-foto">
-                            <img src="<?php echo $row['photo'] ?>" alt="">
+            $data = 0;
+            if(mysqli_num_rows($resultado) > 0){
+                while($row = $resultado-> fetch_assoc()){
+                    if($row['estadoCita'] == 0){
+                        $_SESSION['errorCita'] = 1;
+                        header('Location: ');
+                    }   else {
+                    ?>
+                        <div class="cita">
+                            
                         </div>
-                        <div class="con-info-cita">
-                            <h2>Cita <?php echo $row['NombreTipoCita'] ?></h2> <span><?php echo fechaEs($row['fecha']) ?> | <?php echo $row['hora'] ?></span>
-                            <p><?php echo $row['Doctor'] ?></p>
-                        </div>
-                        <div class="actions">
-                            <a href="pres_neg_cita.php?idCita=<?php echo $row['id_cita']?>&tipoCita=<?php echo $_GET['cita'] ?>">Ver más</a>
-                        </div>
-                    </div>
-                <?php
+                    <?php
+                    }
+                }
+            }else{
+                $data = false;
             }
+            return $data;
         }
     }
     function fechaEs($fecha) {
@@ -82,22 +79,10 @@ $cita = new cita;
         include('./components/navbar.php');
         ?>
         <div class="body-contenido">
-            <div class="con-citas-d">
-                <div class="header-citas-d">
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Seleccione fecha de cita" require name="especialidad">
-                            <option value="18/11/2023">18/11/2023</option>
-                            <option value="18/11/2023">18/11/2023</option>
-                            <option value="18/11/2023">18/11/2023</option>
-                        </select>
-                        <label for="floatingSelect">Seleccione fecha de cita</label>
-                    </div>
-                </div>
-                <div class="body-cita-d">
-                    <?php
-                        $cita->show($_GET['cita'], $dateCurrent, $hora);
-                    ?>
-                </div>
+            <div class="con-cita-show">
+                <?php 
+                    $data = $cita->showCita($_GET['idCita'], $_GET['tipoCita']);
+                ?>
             </div>
         </div>
 </div>
