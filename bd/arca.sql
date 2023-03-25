@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2022 a las 03:31:11
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 7.4.29
+-- Tiempo de generación: 08-03-2023 a las 15:03:04
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,17 +36,18 @@ CREATE TABLE `citasmedicas` (
   `tddDoctor` varchar(10) NOT NULL,
   `docDoctor` varchar(20) NOT NULL,
   `tddPaciente` varchar(10) NOT NULL,
-  `docPaciente` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `docPaciente` varchar(20) DEFAULT NULL,
+  `tipo_cita` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `citasmedicas`
 --
 
-INSERT INTO `citasmedicas` (`id_cita`, `fecha`, `hora`, `estadoCita`, `consultorio`, `tddDoctor`, `docDoctor`, `tddPaciente`, `docPaciente`) VALUES
-(1, '2022-08-13', '15:00:00', 0, 903, '', '721827383', '', NULL),
-(2, '2022-08-13', '14:00:00', 1, 903, '', '721827383', '', '1203827182'),
-(7, '2022-08-19', '20:00:00', 1, 782, '', '1018726753', ' ', ' ');
+INSERT INTO `citasmedicas` (`id_cita`, `fecha`, `hora`, `estadoCita`, `consultorio`, `tddDoctor`, `docDoctor`, `tddPaciente`, `docPaciente`, `tipo_cita`) VALUES
+(1, '2022-08-13', '15:00:00', 1, 903, '', '721827383', 'CC', '2222', 'General'),
+(2, '2022-08-13', '14:00:00', 1, 903, '', '721827383', 'CC', '2222', 'General'),
+(3, '2022-08-19', '20:00:00', 1, 904, '', '1018726753', 'CC', '2222', 'General');
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ INSERT INTO `citasmedicas` (`id_cita`, `fecha`, `hora`, `estadoCita`, `consultor
 CREATE TABLE `especialidad` (
   `idEspecialidad` int(11) NOT NULL,
   `nombreEspecialidad` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `especialidad`
@@ -80,7 +81,7 @@ CREATE TABLE `observacion` (
   `id_cita` int(11) NOT NULL,
   `observacion` varchar(1000) DEFAULT NULL,
   `soporte` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,7 @@ CREATE TABLE `pqrsf` (
   `detallePQRSF` varchar(1000) NOT NULL,
   `soportePQRSF` varchar(100) DEFAULT NULL,
   `estadoPQRSF` tinyint(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pqrsf`
@@ -113,9 +114,9 @@ CREATE TABLE `pqrsf` (
 
 INSERT INTO `pqrsf` (`fk_pk_tipo_documentoU`, `documento_U`, `pNombre_U`, `sNombre_U`, `pApellido_U`, `sApellido_U`, `celular_U`, `telefono_U`, `correoElectronico_U`, `fk_pk_idTipoPQRSF`, `NumeroRadicacion`, `fechaPQRSF`, `motivoPQRSF`, `detallePQRSF`, `soportePQRSF`, `estadoPQRSF`) VALUES
 ('CC', '281379387', 'Maria', 'José', 'Perez', 'Rojas', 3219787661, 7852456, 'maria32@outlook.com', 1, 1, '2021-06-04', 'No permite descargar informe	', 'El sistema no permite descargar el informe de la cita del día 03-06-2021', '', 0),
-('CC', '281379387', 'Carlos', 'Emmanuel', 'Cruz', 'Ramirez', 3117865243, 7852755, 'caemcruz32@gmail.com', 2, 2, '2050-05-22', 'Buena interfaz del sistema', 'Felicitacion por la buena interfaz que tiene el sistema', '', 1),
-('CC', '73937291', 'Alejandra', 'Maria', 'Vargas', 'Torres', 3058765432, 7254455, 'maleja67@gmail.com', 4, 3, '2021-07-15', 'Dificultades para obtener cita medica', 'Desde el dia 15-05-2050 no he podido programar una cita medica.', 'Archivo.pdf', 1),
-('CC', '12673126', 'Tatiana', '', 'Ospina', 'Martinez', 3202876543, 72854855, 'taty999@gmail.com', 5, 4, '2021-07-15', 'Sugerencia de diseño	', 'La letra podria ser más grande para mayor visibilidad.', '', 0);
+('CC', '281379387', 'Carlos', 'Emmanuel', 'Cruz', 'Ramirez', 3117865243, 7852755, 'caemcruz32@gmail.com', 2, 2, '2050-05-22', 'Buena interfaz del sistema', 'Felicitacion por la buena interfaz que tiene el sistema', '', 0),
+('TI', '1023937291', 'Alejandra', 'Maria', 'Vargas', 'Torres', 3058765432, 7254455, 'maleja67@gmail.com', 4, 3, '2021-07-15', 'Dificultades para obtener cita medica', 'Desde el dia 15-05-2050 no he podido programar una cita medica.', 'Archivo.pdf', 0),
+('CC', '12673126', 'Tatiana', '', 'Ospina', 'Martinez', 3202876543, 72854855, 'taty999@gmail.com', 5, 4, '2021-07-15', 'Sugerencia de diseño	', 'La letra podria ser más grande para mayor visibilidad.', '', 1);
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,7 @@ INSERT INTO `pqrsf` (`fk_pk_tipo_documentoU`, `documento_U`, `pNombre_U`, `sNomb
 CREATE TABLE `pregunta_seguridad` (
   `n_pregunta` int(11) NOT NULL,
   `pregunta_seg` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pregunta_seguridad`
@@ -145,7 +146,7 @@ INSERT INTO `pregunta_seguridad` (`n_pregunta`, `pregunta_seg`) VALUES
 CREATE TABLE `roles` (
   `cod_rol` int(11) NOT NULL,
   `desc_rol` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -166,7 +167,7 @@ INSERT INTO `roles` (`cod_rol`, `desc_rol`) VALUES
 CREATE TABLE `tipodocumento` (
   `tdd` varchar(3) NOT NULL,
   `descripcion` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tipodocumento`
@@ -186,7 +187,7 @@ INSERT INTO `tipodocumento` (`tdd`, `descripcion`) VALUES
 CREATE TABLE `tipopqrsf` (
   `idTipoPQRSF` int(11) NOT NULL,
   `TipoPQRSF` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tipopqrsf`
@@ -208,7 +209,7 @@ INSERT INTO `tipopqrsf` (`idTipoPQRSF`, `TipoPQRSF`) VALUES
 CREATE TABLE `tiposdecita` (
   `idTiposCita` int(11) NOT NULL,
   `NombreTipoCita` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tiposdecita`
@@ -216,7 +217,8 @@ CREATE TABLE `tiposdecita` (
 
 INSERT INTO `tiposdecita` (`idTiposCita`, `NombreTipoCita`) VALUES
 (1, 'General'),
-(2, 'Psicologo');
+(2, 'Psicologo'),
+(3, 'Terapia');
 
 -- --------------------------------------------------------
 
@@ -241,31 +243,34 @@ CREATE TABLE `usuario` (
   `claveU` varchar(100) NOT NULL,
   `fk_pregunta_seg` int(11) DEFAULT NULL,
   `resp_preg` varchar(100) DEFAULT NULL,
-  `photo` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `photo` varchar(100) DEFAULT NULL,
+  `pin` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`fk_pk_tipo_documentoU`, `documento_U`, `estado_U`, `pNombre_U`, `sNombre_U`, `pApellido_U`, `sApellido_U`, `fechaNacimiento_U`, `direccion_U`, `correoElectronico_U`, `celular_U`, `eps_P`, `especialidad_U`, `claveU`, `fk_pregunta_seg`, `resp_preg`, `photo`) VALUES
-('CE', '1018726753', 1, 'Flor', '', 'Amaya', 'Arevalo', '1995-05-07', 'Cra 97c #47C - 78', 'arevalo45@arca.com', 3027685642, NULL, '1', '$2y$10$/j/28qjNGeKMO3jtqnAnm.6HNQgTYAeowcYLPDeUXWAr.8vEDysgC', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '1019877654', 1, 'Jorge', '', 'Villa', 'Sanchez', '1993-10-09', 'Calle 10A #20-19', 'villa4032@arca.com', 3056786452, NULL, '1', '$2y$10$7HazEqANZ9bNUnsVfmdFkO7bMuBk0rQx0Gxb0l0q5xyZJtBeLJAKe', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '102128331', 1, 'Santiago', '', 'Flores', 'Gomez', '1970-04-27', 'Calle 43 No. 27-12', 'flores3261@arca.com', 3145439850, NULL, '4', '$2y$10$g1iRUS5DBRfdT7wuTOsPaukj2C2UmZpSYefQaau1annF6SdsEe5Vm', NULL, NULL, 'assets/img/profileImages/0.png'),
-('TI', '1023937291', 1, 'Alejandra', 'Maria', 'Vargas', 'Torres', '2006-12-20', 'Av. Ciudad de Cali No. 6C-09', 'maleja67@gmail.com', 3058765432, 'Sura', '0', '$2y$10$EQGXqLDXoB3lBoD1aRs9Suc0kCPC29dJC/8lz/AS71NK2cWpBdPcG', 1, 'Titan', 'assets/img/profileImages/0.png'),
-('CC', '1040340344', 1, 'Martha', 'Cecilia', 'Fonseca', 'Acevedo', '2005-05-20', 'Av. Ciudad de Cali No. 9C-76', 'acevado@arca.com', 3145439851, NULL, '0', '$2y$10$W2r.jkPzRQgjpfeMUy7RCOeTNufvmNKCY/ZbdmSe69wpKtyOxPDoa', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '1049204933', 1, 'Carlos', 'Manuel', 'Soler', 'Rosas', '1985-10-10', 'Calle 90B sur #13-27', 'soler52@arca.com', 3132095640, NULL, '0', '$2y$10$JOQU5kT0Kd7Ww3JnawCw5OH6Lu53cZtsO17o10vmmc/gnfiQB7bwq', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '1111', 1, 'Admin', 'Admin', 'Admin', 'Admin', '0000-00-00', 'Casa de admin', 'admin@arca.com.co', 1111111111, NULL, '4', '$2y$10$H2TcBi/IgcQdqmc6bcJt9.vhRBHRGbk8Cyjq7HRBS6tkTjEvbsYk2', NULL, NULL, 'assets/img/profileImages/0.png'),
-('TI', '1203827182', 1, 'Carlos', 'Emmanuel', 'Cruz', 'Ramirez', '2007-09-07', 'Calle 24 No 5-60', 'caemcruz32@gmail.com', 3117865243, 'Cafam', '0', '$2y$10$hlK4opkjujY7MsZclQdlQ.ahVWJGQrGsUoaujPpsooEhrGfsoVdGm', 1, 'Max', 'assets/img/profileImages/0.png'),
-('CC', '12673126', 1, 'Tatiana', '', 'Ospina', 'Martinez', '1999-05-19', 'Avenida Cra. 60 No. 57-60', 'taty999@gmail.com', 3202876543, 'Sura', '0', '$2y$10$PIO3Eu4IP.YNnSfmbzJZOuuK6icExluxQUc8wZXNN.FJ3JTYadGH6', 2, 'Santa Marta', 'assets/img/profileImages/0.png'),
-('CC', '2222', 1, 'Secretaria', 'Secretaria', 'Secretaria', 'Secretaria', '0000-00-00', 'Casa de secretaria', 'secretaria@arca.com.co', 2222222222, NULL, '0', '$2y$10$W3/l9EKOnGTtsT2gMEhfK.ugcUGCgn0pigJgO3wl3QMhaQLmqjTae', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CE', '281379387', 1, 'Maria', 'Jose', 'Perez', 'Rojas', '1999-03-11', 'Calle 11 No. 4 - 14', 'maria32@outlook.com', 3219787661, 'Sanitas', '0', '$2y$10$10ibIO5wkko7wAKPDMLGM.ctPJowzOkle0SASidkow2V2rth7HI/y', 2, 'Bogotá', 'assets/img/profileImages/0.png'),
-('CC', '3333', 1, 'Doctor', 'Doctor', 'Doctor', 'Doctor', '0000-00-00', 'Casa de doctor', 'doctor@arca.com.co', 3333333333, NULL, '2', '$2y$10$GZJW4p5ySZeTwxSzV1BNDO1vO..umi6yOPQ4EKnlTm1Ca97TvV7Li', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '4444', 1, 'Paciente', 'Paciente', 'Paciente', 'Paciente', '0000-00-00', 'Casa de paciente', 'paciente@arca.com.co', 4444444444, NULL, '0', '$2y$10$y63N/EUMRlG/7X02UrnjP.B3qG57jfsiINU2hicFaHiTle.upgn8W', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '52876456', 1, 'Juan', 'Daniel', 'Rojas', 'Diaz', '1974-02-25', 'Carrera 49B #60-50', 'rojas23@arca.com', 3024567687, NULL, '1', '$2y$10$830nYvRk/D4jsZu8HyRmKutrQW5pmQ/w7dXSgOEh2g1NE.RXxS6Au', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CC', '721827383', 1, 'Yeraldin', 'Marcela', 'Vega', 'Sanchez', '1994-12-08', 'Calle 45 No 60-32', 'vega4965@arca.com', 3145604949, NULL, '2', '$2y$10$fZFTAIq4WC35myUvSR22iesmXWGtlyUbYyfvjGyOtEaVNAc2sfJym', NULL, NULL, 'assets/img/profileImages/0.png'),
-('CE', '748323632', 1, 'Pablo', 'Jose', 'Cortez', 'Blanco', '1983-04-06', 'Calle 48b sur No. 21-13', 'pablito73@outlook.com', 3129876543, 'Compensar', '0', '$2y$10$Qil1jf2Tp6d6QWGvJgPd3ehnH4fgIfl6.V0bUKz6ALQ04l.CsudOK', 2, 'Bogota', 'assets/img/profileImages/0.png'),
-('CC', '9876256', 1, 'Daniela', 'Maria', 'Beltran', 'Jimenez', '1967-11-06', 'Cra 90b #50A-12', 'beltran4051@arca.com', 3118765421, NULL, '2', '$2y$10$n7Mxis.g58Z9ajQAfjrtB.Ja7uwp3G0ZzG3HpkTJwGFBlRqeKMpj6', NULL, NULL, 'assets/img/profileImages/0.png');
+INSERT INTO `usuario` (`fk_pk_tipo_documentoU`, `documento_U`, `estado_U`, `pNombre_U`, `sNombre_U`, `pApellido_U`, `sApellido_U`, `fechaNacimiento_U`, `direccion_U`, `correoElectronico_U`, `celular_U`, `eps_P`, `especialidad_U`, `claveU`, `fk_pregunta_seg`, `resp_preg`, `photo`, `pin`) VALUES
+('CE', '1018726753', 1, 'Flor', '', 'Amaya', 'Arevalo', '1995-05-07', 'Cra 97c #47C - 78', 'arevalo45@arca.com', 3027685642, NULL, '2', '$2y$10$/j/28qjNGeKMO3jtqnAnm.6HNQgTYAeowcYLPDeUXWAr.8vEDysgC', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '1019877654', 1, 'Jorge', '', 'Villa', 'Sanchez', '1993-10-09', 'Calle 10A #20-19', 'villa4032@arca.com', 3056786452, NULL, '1', '$2y$10$7HazEqANZ9bNUnsVfmdFkO7bMuBk0rQx0Gxb0l0q5xyZJtBeLJAKe', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '102128331', 1, 'Santiago', '', 'Flores', 'Gomez', '1970-04-27', 'Calle 43 No. 27-12', 'gamepass9089564@outlook.com', 3145439850, NULL, '4', '$2y$10$onnof619EUKYxWZUMpnXn.VpN9RWhQ8lOitB47PekOAAuWn5OmHI6', NULL, NULL, 'assets/img/profileImages/0.png', '$2y$10$JTLBWg3PP2O9Qx8X46gegOUx9WqWGpCpY6T.0AA4CwFERJH61vRTu'),
+('CC', '1021938273', 1, 'Manuel', '', 'Pelaez', 'Rosero', '2001-03-13', 'cr 8 # 13-15', 'aescobargaviria5@gmail.com', 3163789022, NULL, '0', '$2y$10$k.kbbWOMx8erCNelWikpt.OKFloQZP.o1N9iHMHHby/tcQ1RBKoXK', 0, 'NULL', 'assets/img/profileImages/0.png', '$2y$10$HTDcl/fMF2Zem969b9uKt.aDJXuSbmoknSI9MqnSO/FA8NyjYJjsK'),
+('TI', '1023937291', 1, 'Alejandra', 'Maria', 'Vargas', 'Torres', '2006-12-20', 'Av. Ciudad de Cali No. 6C-09', 'maleja67@gmail.com', 3058765432, 'Sura', '0', '$2y$10$EQGXqLDXoB3lBoD1aRs9Suc0kCPC29dJC/8lz/AS71NK2cWpBdPcG', 1, 'Titan', 'assets/img/profileImages/0.png', '0'),
+('CC', '1029873633', 1, 'Santiago', '', 'Pelaez', 'Romero', '2004-08-14', 'cr 8 # 10-19', 'santiagorom@gmail.com', 3189347811, NULL, '0', '$2y$10$tBY60uV3Z4MFm87eQQrkgOp77egOiPlg1bHHM3LomRgMBkhb1obv6', 0, 'NULL', 'assets/img/profileImages/0.png', '0'),
+('CC', '1040340344', 1, 'Martha', 'Cecilia', 'Fonseca', 'Acevedo', '2005-05-20', 'Av. Ciudad de Cali No. 9C-76', 'acevado@arca.com', 3145439851, NULL, '0', '$2y$10$W2r.jkPzRQgjpfeMUy7RCOeTNufvmNKCY/ZbdmSe69wpKtyOxPDoa', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '1049204933', 0, 'Carlos', 'Manuel', 'Soler', 'Rosas', '1985-10-10', 'Calle 90B sur #13-27', 'soler52@arca.com', 3132095640, NULL, '0', '$2y$10$JOQU5kT0Kd7Ww3JnawCw5OH6Lu53cZtsO17o10vmmc/gnfiQB7bwq', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '1111', 1, 'Admin', 'Admin', 'Admin', 'Admin', '0000-00-00', 'Casa de admin', 'admin@arca.com.co', 1111111111, NULL, '4', '$2y$10$H2TcBi/IgcQdqmc6bcJt9.vhRBHRGbk8Cyjq7HRBS6tkTjEvbsYk2', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('TI', '1203827182', 1, 'Carlos', 'Emmanuel', 'Cruz', 'Ramirez', '2007-09-07', 'Calle 24 No 5-60', 'caemcruz32@gmail.com', 3117865243, 'Cafam', '0', '$2y$10$hlK4opkjujY7MsZclQdlQ.ahVWJGQrGsUoaujPpsooEhrGfsoVdGm', 1, 'Max', 'assets/img/profileImages/0.png', '0'),
+('CC', '12673126', 1, 'Tatiana', '', 'Ospina', 'Martinez', '1999-05-19', 'Avenida Cra. 60 No. 57-60', 'taty999@gmail.com', 3202876543, 'Sura', '0', '$2y$10$PIO3Eu4IP.YNnSfmbzJZOuuK6icExluxQUc8wZXNN.FJ3JTYadGH6', 2, 'Santa Marta', 'assets/img/profileImages/0.png', '0'),
+('CC', '2222', 1, 'Secretaria', 'Secretaria', 'Secretaria', 'Secretaria', '0000-00-00', 'Casa de secretaria', 'secretaria@arca.com.co', 2222222222, NULL, '0', '$2y$10$W3/l9EKOnGTtsT2gMEhfK.ugcUGCgn0pigJgO3wl3QMhaQLmqjTae', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CE', '281379387', 1, 'Maria', 'Jose', 'Perez', 'Rojas', '1999-03-11', 'Calle 11 No. 4 - 14', 'maria32@outlook.com', 3219787661, 'Sanitas', '0', '$2y$10$10ibIO5wkko7wAKPDMLGM.ctPJowzOkle0SASidkow2V2rth7HI/y', 2, 'Bogotá', 'assets/img/profileImages/0.png', '0'),
+('CC', '3333', 1, 'Doctor', 'Doctor', 'Doctor', 'Doctor', '0000-00-00', 'Casa de doctor', 'doctor@arca.com.co', 3333333333, NULL, '2', '$2y$10$GZJW4p5ySZeTwxSzV1BNDO1vO..umi6yOPQ4EKnlTm1Ca97TvV7Li', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '4444', 1, 'Paciente', 'Paciente', 'Paciente', 'Paciente', '0000-00-00', 'Casa de paciente', 'paciente@arca.com.co', 4444444444, NULL, '0', '$2y$10$y63N/EUMRlG/7X02UrnjP.B3qG57jfsiINU2hicFaHiTle.upgn8W', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '52876456', 1, 'Juan', 'Daniel', 'Rojas', 'Diaz', '1974-02-25', 'Carrera 49B #60-50', 'rojas23@arca.com', 3024567687, NULL, '1', '$2y$10$830nYvRk/D4jsZu8HyRmKutrQW5pmQ/w7dXSgOEh2g1NE.RXxS6Au', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CC', '721827383', 1, 'Yeraldin', 'Marcela', 'Vega', 'Sanchez', '1994-12-08', 'Calle 45 No 60-32', 'vega4965@arca.com', 3145604949, NULL, '2', '$2y$10$fZFTAIq4WC35myUvSR22iesmXWGtlyUbYyfvjGyOtEaVNAc2sfJym', NULL, NULL, 'assets/img/profileImages/0.png', '0'),
+('CE', '748323632', 1, 'Pablo', 'Jose', 'Cortez', 'Blanco', '1983-04-06', 'Calle 48b sur No. 21-13', 'pablito73@outlook.com', 3129876543, 'Compensar', '0', '$2y$10$Qil1jf2Tp6d6QWGvJgPd3ehnH4fgIfl6.V0bUKz6ALQ04l.CsudOK', 2, 'Bogota', 'assets/img/profileImages/0.png', '0'),
+('CC', '9876256', 1, 'Daniela', 'Maria', 'Beltran', 'Jimenez', '1967-11-06', 'Cra 90b #50A-12', 'beltran4051@arca.com', 3118765421, NULL, '2', '$2y$10$n7Mxis.g58Z9ajQAfjrtB.Ja7uwp3G0ZzG3HpkTJwGFBlRqeKMpj6', NULL, NULL, 'assets/img/profileImages/0.png', '0');
 
 -- --------------------------------------------------------
 
@@ -277,7 +282,7 @@ CREATE TABLE `usuario_has_roles` (
   `usuario_tdoc` varchar(10) NOT NULL,
   `usuario_id` int(11) NOT NULL,
   `usuario_rol` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario_has_roles`
@@ -288,19 +293,28 @@ INSERT INTO `usuario_has_roles` (`usuario_tdoc`, `usuario_id`, `usuario_rol`) VA
 ('CC', 2222, 2),
 ('CC', 3333, 3),
 ('CC', 4444, 4),
+('CC', 112121, 4),
 ('CC', 9876256, 3),
 ('CC', 12673126, 4),
 ('CC', 52876456, 3),
 ('CC', 102128331, 1),
 ('CC', 721827383, 3),
 ('CC', 1019877654, 3),
+('CC', 1021938273, 4),
+('CC', 1029873633, 4),
+('CC', 1032876355, 4),
 ('CC', 1034586848, 2),
 ('CC', 1040340344, 1),
 ('CC', 1049204933, 2),
+('CC', 1087283514, 4),
+('CC', 1093536122, 4),
+('CC', 1098376465, 4),
+('CC', 1287127621, 4),
 ('CE', 281379387, 4),
 ('CE', 748323632, 4),
 ('CE', 1018726753, 3),
 ('TI', 1023937291, 4),
+('TI', 1097376465, 4),
 ('TI', 1203827182, 4);
 
 --
@@ -411,7 +425,7 @@ ALTER TABLE `tipopqrsf`
 -- AUTO_INCREMENT de la tabla `tiposdecita`
 --
 ALTER TABLE `tiposdecita`
-  MODIFY `idTiposCita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idTiposCita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,23 @@
+.con-table-ci{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-content: center;
+}
+.search-ci{
+    display: grid;
+    align-content: center;
+    grid-template-columns: 20%;
+    grid-template-rows: 50%;
+}
+#check-estado{
+    width: 60px !important;
+    height: 30px !important;
+    cursor: pointer;
+    display: grid;
+    align-content: center;
+}
+.form-check-input:checked{
+    background-color: var(--main-color);
+}

@@ -60,7 +60,7 @@
                                         </div>
 
                                         <div class="con-ol">
-                                                <a href="#">¿Olvidaste tu contraseña?</a>
+                                                <a href="./recovery_password.php">¿Olvidaste tu contraseña?</a>
                                         </div>
                                         
                                         <div class="con-btns">

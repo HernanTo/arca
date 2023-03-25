@@ -67,7 +67,11 @@
     $titlePage = "Gestion de usuarios.";
     $descPage = "Gestiona a tus usuarios de una manera sencilla.";
 
+<<<<<<< HEAD
     $classUser = new user;
+=======
+    $classUser = new User;
+>>>>>>> 73de413e4c355d84403340cf6517c5e6be54ab2e
     $data = $classUser->edit($_GET['tdd'], $_GET['document'], $_SESSION['role'], $_SESSION['specialty']);
 ?>
 <!DOCTYPE html>
@@ -87,8 +91,13 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./assets/img/icons/logo.svg" />
     <link rel="stylesheet" href="./css/components.css">
+<<<<<<< HEAD
     <!-- End main core -->
     <link rel="stylesheet" href="./css/editDataUser.css">
+=======
+    <link rel="stylesheet" href="./css/editDataUser.css">
+    <!-- End main core -->
+>>>>>>> 73de413e4c355d84403340cf6517c5e6be54ab2e
 
     
 </head>
